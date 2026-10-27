@@ -19,7 +19,7 @@ Fonts: EB Garamond and DM Mono are used if installed; otherwise Latin Modern is 
 |---|---|
 | `main.tex` | Document skeleton and `\input` order |
 | `preamble.tex` | Page size (6 x 9 in), brand colours, headings, tables, running heads |
-| `frontmatter/` | Title page (placeholder), Foreword (placeholder, author to supply) |
+| `frontmatter/` | Title page (placeholder), Foreword (author-written) |
 | `chapters/ch01.tex` to `ch21.tex` | One file per chapter; `\part` commands sit at the head of chapters 1, 5, 11 and 16 |
 | `backmatter/` | Epilogue and Appendices A to E |
 
