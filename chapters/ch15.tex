@@ -1,0 +1,142 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter{Agentic AI, the Problem Gets Exponentially Worse}
+
+At this moment, a compliance monitoring agent at a major bank is evaluating transaction 47,832. It has assessed tens of thousands of transactions in the past hour. For this one, its information picture, assembled from the customer's historical profile, current regulatory alert thresholds, and the accumulated context of its session, indicates suspicious activity. The agent generates a sub-decision: freeze the account. The freeze executes. The customer's access to funds is suspended. No human reviewed this decision. No human was present at the decision moment. The information picture that produced the freeze has already been superseded by the next transaction's assessment. It no longer exists in any recoverable form.
+
+That sequence is not a future risk. It is the operational reality of agentic AI in regulated environments today. And it breaks every assumption on which the Digital Alibi governance architecture described in Chapters 11 through 14 is built.
+
+Chapters 1 through 14 have addressed the Digital Alibi gap as it exists for current-generation AI systems: systems that receive structured inputs, produce outputs, and present those outputs to human decision-makers who then act. The governance architecture required for these systems is demanding but conceptually straightforward. A named human stands at the decision moment. The information picture that existed at the output moment can, in principle, be captured. The accountability chain has a human link at its consequential end. The governance protocol established in Parts One through Three addresses this architecture.
+
+Agentic AI breaks every one of those assumptions simultaneously.
+
+An agentic AI system does not produce a recommendation for a human to act upon. It takes actions, directly, at machine speed, across extended sequences of sub-decisions, on the basis of goals specified at the initiation of the task rather than instructions provided at each decision point. It does not wait for human review between actions. It does not present an information picture to a human reviewer before each consequential step. It generates its own decision chain as it operates, selecting the next action on the basis of the outcome of the previous one, consuming and discarding information pictures at every step.
+
+The governance problem this creates is not a harder version of the problem Chapters 11 through 14 describe. It is a structurally different version. The four Digital Alibi elements, Decision Identity, The Information Picture, The Human Oversight Record, and The Accountability Chain, all remain the standard. But capturing them for an agentic system requires a governance architecture whose design principles are different from anything currently deployed in regulated organisations, and whose absence creates a Digital Alibi gap that makes the gaps described in Parts One and Two look, in comparison, manageable.
+
+\begin{quote}
+\emph{Agentic AI does not amplify the Digital Alibi problem. It transforms it. The human at the decision moment, the anchor of the accountability chain, the reviewer of the information picture, the named individual the SM\&CR requires, is absent from the agentic decision architecture by design. The governance protocol must be rebuilt from that absence, not adapted to accommodate it.}
+\end{quote}
+
+\scenebreak
+
+\section{What Agentic AI Is, and Why the Governance Distinction Matters}
+
+Agentic AI, for governance purposes, is an AI system that operates with significant autonomy across an extended decision sequence, taking actions rather than producing recommendations, within an autonomy boundary that specifies what the system is authorised to do without human review at each step.
+
+The governance distinction between a recommendation system and an agentic system is where the human decision moment sits in the workflow. In a recommendation system, every consequential action is preceded by a human decision to take it. In an agentic system operating within its autonomy boundary, the AI's action is the consequential event. The human authorised the system's goal and the boundary governing its pursuit of that goal, but was not present at the specific action moment.
+
+This distinction produces the chapter's central governance insight. When a board approves a recommendation-based AI system, it approves a tool that informs decisions. When a board approves an agentic AI system, it approves a permission set, a defined scope of autonomous action the system may take without further human authorisation. The autonomy boundary is not a technical parameter. It is the governance document that determines what the system is authorised to do in the board's name, without the board's involvement at each act. Approving the autonomy boundary is the consequential governance decision for agentic AI, because every action the system subsequently takes within that boundary has been pre-authorised by that approval. This is categorically different from approving a recommendation system. It is closer to issuing a standing order than to acquiring a tool.
+
+\begin{quote}
+\emph{When a board approves a recommendation-based AI system, it approves a tool. When it approves an agentic system, it approves a permission set, a standing authorisation for the system to act in its name without further approval at each decision. The autonomy boundary is the consequential governance document. Everything the system does within it has already been approved.}
+\end{quote}
+
+The practical examples of agentic AI in regulated environments are already operational. A compliance monitoring agent that identifies suspicious transaction patterns and places alerts, freezes, or blocks without human review of each individual action. A procurement agent that sources, evaluates, and selects suppliers up to a defined contract value without human review of each selection. A clinical pathway agent that adjusts treatment parameters within a defined protocol range without clinical review of each adjustment. A financial trading agent that executes orders within a defined risk envelope without trader review of each trade. In each case, the system is making consequential decisions, decisions that affect individuals, engage regulatory obligations, or create legal liability, without a human at the specific decision moment.
+
+\scenebreak
+
+\section{The Three Amplifications of the Digital Alibi Gap}
+
+The three ways in which agentic AI makes the Digital Alibi problem structurally worse can be named precisely. Decision Density: the volume of consequential sub-decisions per operation. Accountability Diffusion: the absence of a named human at the action moment. Temporal Irrecoverability: the permanent loss of the information picture at each sub-decision moment if it is not captured as it exists. The 3 D's of agentic risk, Density, Diffusion, Irrecoverability, are independent amplifications that each require a distinct governance response. An organisation that addresses one without the others has not addressed the agentic Digital Alibi problem. All three must be designed for before deployment.
+
+\section{Amplification 1 Decision Density}
+
+A recommendation-based AI system produces one output per decision process. The information picture at that output moment is a single event to be captured. An agentic system completing a complex task may make hundreds of sub-decisions in the course of completing it, each one consuming an information picture, taking an action, and generating a new state that becomes the information picture for the next sub-decision. Every consequential sub-decision is a potential Digital Alibi obligation. The governance architecture must capture Decision Identity, The Information Picture, The Human Oversight Record, and The Accountability Chain at each of them.
+
+The compliance monitoring agent example makes decision density concrete. A single review session of a high-volume transaction portfolio might involve the agent evaluating tens of thousands of transactions. Each evaluation is a decision, is this transaction suspicious? Does it require an alert, a freeze, or escalation? Each decision is made on an information picture that includes the transaction data, the customer's historical profile, the current regulatory alert thresholds, and the system's accumulated context from earlier in the review session. Each information picture is constructed, used, and superseded within milliseconds. The volume of decision moments that require output-moment capture for a single agent operation is orders of magnitude higher than for a recommendation system covering the same scope.
+
+The governance implication is not that agentic AI cannot be deployed. It is that the architecture required to deploy it with Digital Alibi compliance is materially more demanding than the architecture required for recommendation-based systems, and that deploying it without that architecture creates a Digital Alibi gap at every sub-decision moment across every agent operation. A board that has approved the deployment of an agentic system without confirming that a decision-density-capable Digital Alibi architecture is in place has approved the creation of a Digital Alibi gap at machine speed.
+
+\begin{quote}
+\emph{A recommendation system creates one Digital Alibi obligation per decision process. An agentic system creates one Digital Alibi obligation per sub-decision, which may be hundreds per task, thousands per day. The governance architecture required scales with decision density. The gap created without it scales the same way.}
+\end{quote}
+
+\section{Amplification 2 Accountability Diffusion}
+
+In a recommendation-based AI system, the accountability chain has a fixed terminus: the named human who acted on the AI's output. That human may have exercised genuine or performative oversight, Chapter 11 established the distinction, but they are present as a named individual at the consequential moment. The SM\&CR accountability chain can attach to them. The Companies Act duty of care is assessed against their conduct. The Digital Alibi's Human Oversight Record documents what they were shown and what they decided.
+
+In an agentic system, there is no named human at the specific action moment. The system generated the decision to take the action. The human who authorised the system's deployment authorised the autonomy boundary within which the action was legally taken. But the accountability chain from that specific action back to a named individual is not a chain with a human link at its consequential end. It is a chain whose consequential link was created by the system itself.
+
+The governance implication is structural. The accountability chain for an agentic system cannot be built at the action moment, it must be designed into the system's governance architecture before deployment. The autonomy boundary definition must specify which categories of action are within the system's authorised scope, and which named individual at board level has accepted the risk of each category. The escalation protocol must specify the conditions under which the system must halt and present an action for human review before proceeding. The incident classification must specify the post-action conditions that trigger a human review of what the system did and why.
+
+The most dangerous accountability failure in agentic AI is not that the accountability chain is absent. It is that it appears to be present, the autonomy boundary is documented, the named board-level risk acceptance authority is recorded, but the chain is too coarse to answer the output-moment question. A chain that names a Chief Risk Officer as accountable for the compliance monitoring agent's actions does not answer the question: who was accountable, at the moment this specific transaction was flagged and this specific account was frozen, for the decision to take that action on this customer's account? The chain exists at system level. The output-moment attribution does not.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{THE SELF-GENERATED ACCOUNTABILITY CHAIN, WHAT AGENTIC AI CREATES WITHOUT GOVERNANCE ARCHITECTURE}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+The agentic system receives a goal: ``Monitor the transaction portfolio and flag suspicious activity according to current regulatory thresholds.'' \\
+The system evaluates transaction 47,832. It determines, on the basis of its information picture at that moment, that the transaction is suspicious. It generates the sub-decision to place a freeze on the account. \\
+The freeze is consequential: it affects an individual customer's access to funds, engages regulatory notification obligations, and creates potential legal liability if the freeze is subsequently found to be in error. \\
+The governance record shows: the system was authorised to take this class of action by the autonomy boundary. The named risk acceptance authority is the Chief Compliance Officer. The action was within scope. \\
+What the governance record does not show: which version of the suspicious activity detection model made this specific evaluation, what transaction data the model was given and not given for this specific transaction, whether any human reviewed this action before it was taken or could have reviewed it within the autonomy boundary framework, and which named individual is accountable for the specific decision to freeze this specific account at this specific moment. \\
+The accountability chain for the system exists. The accountability chain for the action does not. That gap is the agentic accountability diffusion failure. \\
+\end{longtable}
+
+\section{Amplification 3 Temporal Irrecoverability}
+
+The third amplification is the most structurally severe. For a recommendation-based AI system, the output moment is a defined event, a point at which the model produces its output and the information picture exists in a form that can, if the governance architecture captures it, be preserved. The output moment is not instantaneous, but it is bounded. The information picture does not change between the moment the model processes its inputs and the moment the output is presented for human review.
+
+For an agentic system, the information picture at each sub-decision moment is generated as an emergent product of the system's accumulated context, the history of its actions, the environmental state it has encountered, and the interpretations it has formed through its operation. That context is not stored in a retrievable form between sub-decisions; it is the system's active operational state. When the system takes the next action, the context that informed the previous one is overwritten. The information picture at each sub-decision moment exists as a coherent governance object for milliseconds. If it is not captured at that moment, it cannot be recovered.
+
+This is temporal irrecoverability: the characteristic of agentic AI decision-making that makes retrofitting a Digital Alibi architecture after deployment not merely difficult but structurally impossible for the decisions already made. A recommendation system can be retrofitted with improved logging that captures the information picture for future decisions, while the historical gap remains. For an agentic system, the information pictures at past sub-decision moments are permanently irrecoverable, not because the logs were not retained, but because the information that constituted those pictures was never in a form that could be captured. It existed only in the system's active operational state at each action moment.
+
+\begin{quote}
+\emph{For a recommendation system, an improved logging architecture closes the Digital Alibi gap going forward while the historical gap remains. For an agentic system, there is no going forward without the architecture, because the information pictures are irrecoverable from the moment of action. The governance architecture must be built before the first deployment. There is no retrofit.}
+\end{quote}
+
+\scenebreak
+
+\section{Agentic AI and the Governance Classification}
+
+Chapter 14 established the Governance Classification as the diagnostic instrument for locating an organisation's current governance position. Agentic AI does not change the five facets of the Classification, Accountability, Exposure, Control, Regulation, and Maturity remain the dimensions of measurement. What it does is raise the bar on every facet simultaneously, making positions that are adequate for recommendation-based AI systems inadequate for agentic ones.
+
+On the A facet, Accountability: an organisation at A4 for its recommendation-based AI systems has named individual accountability at the output-moment level, with accountability chains documented contemporaneously. For agentic AI, A4 requires that the accountability chain is designed into the system architecture, not documented at deployment and assumed to hold for every subsequent action, but generated at each action moment in a form that names the responsible individual for that specific decision within the system's autonomy boundary. This is a fundamentally different accountability architecture, and most organisations that have reached A4 for their recommendation systems have not built it for their agentic ones.
+
+On the E facet, Exposure: agentic systems create a new category of hidden material decision, the sub-decision that is consequential but not visible in the formal AI inventory because it is generated within an agent operation rather than by a discrete AI system. An organisation at E4 for its formal AI systems may be at E1 for the sub-decisions generated by its agentic deployments, because those sub-decisions are not in any inventory. They exist as operational events, not as governed AI outputs.
+
+On the C facet, Control: independently verified controls for recommendation-based AI systems are designed to verify that the system operates within its defined parameters and that human oversight is genuine. For agentic systems, C4 requires verification that the autonomy boundary is functioning as designed, that escalation triggers are working, that action logging is capturing decision-moment information pictures, and that the human review processes for escalated decisions are capable of genuine oversight rather than performative ratification of decisions the system has already effectively made.
+
+The practical implication is that an organisation deploying agentic AI alongside its recommendation-based AI systems should confirm separate governance addresses for each. The A4·E4·C4·R4·M4 address that represents full compliance for a recommendation-based financial services deployment is not the same standard as A4·E4·C4·R4·M4 for an agentic deployment in the same organisation. The facet levels are the same. The governance architecture required to substantiate them is categorically different.
+
+\scenebreak
+
+\section{What a Board Should Demand Before Approving Agentic AI Deployment}
+
+A board considering approval of an agentic AI system deployment, whether developed in-house, procured from a vendor, or embedded in a platform, should require affirmative answers to four questions before approval is granted. These questions are not a complete governance protocol. They are the minimum threshold below which approval should not proceed.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{FOUR QUESTIONS A BOARD MUST ANSWER BEFORE APPROVING AGENTIC AI DEPLOYMENT}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Is the autonomy boundary formally defined, documented, and named? The autonomy boundary must specify, in terms that a human reviewer can verify after the fact, what categories of action the system is authorised to take without human review, at what thresholds, and under what conditions. A boundary defined by capability (``the system can do X'') is not a governance boundary. A boundary defined by authorisation (``the system is authorised to do X under conditions Y and Z, as accepted by named individual N'') is. \\
+2. Is a decision-density-capable Digital Alibi architecture in place before deployment? The architecture must capture Decision Identity, The Information Picture, The Human Oversight Record, and The Accountability Chain at each consequential sub-decision moment, not at each agent session or each task completion. If the architecture cannot capture at sub-decision density, it cannot produce a Digital Alibi for the agentic system's consequential actions. \\
+3. Is temporal irrecoverability addressed? The information picture at each sub-decision moment must be captured as it exists, in the system's active operational state, at the moment of action. If the architecture relies on post-hoc log assembly to reconstruct the information picture, temporal irrecoverability has not been addressed. \\
+4. Is the escalation protocol genuine? The conditions under which the system must halt and present an action for human review must be conditions at which a human reviewer has both the information and the capacity to exercise genuine oversight, not conditions so rarely triggered that the escalation mechanism functions as performative governance. An escalation protocol that has never been triggered in a live deployment is a signal that the autonomy boundary has been drawn too coarsely. \\
+\end{longtable}
+
+A board that approves agentic AI deployment without affirmative answers to these four questions has not applied the Digital Alibi standard to an AI deployment that requires it more urgently than any recommendation-based system. The decision density, accountability diffusion, and temporal irrecoverability of agentic AI make the governance gap created by absent architecture more severe, more rapidly accumulated, and more completely irrecoverable than any gap described in Parts One or Two.
+
+\scenebreak
+
+\section{From Diagnosis to Protocol: Part Four}
+
+Part Three has now established the complete operational picture of the Digital Alibi gap. Chapter 11 defined the four elements at the level of precision that implementation requires. Chapter 12 established which decisions require the standard and where the hidden material decisions are. Chapter 13 provided the three-part test for the Information Picture. Chapter 14 gave the board its governance address and the diagnostic instrument to confirm it. Chapter 15 has established that agentic AI raises every bar on the Governance Classification simultaneously and creates three amplifications of the Digital Alibi problem that require a governance architecture whose design principles are categorically different from those adequate for recommendation-based systems.
+
+Part Four is the board's working protocol. It does not introduce new diagnostic tools or additional theoretical framework. It provides the operational steps for closing the Digital Alibi gap identified by the diagnosis: the Digital Alibi Assessment, the Alibi Record architecture, the governance address improvement roadmap, the board governance protocol for ongoing AI oversight, and the specific actions the EU AI Act obligations, in force since 2 August 2026, now require of high-risk system operators.
+
+The reader who completes Part Three has the complete diagnostic picture. The reader who completes Part Four has the complete governance response. The Governance Classification address a board confirms at the end of Part Three is the starting point for the protocol that Part Four describes. The gap between that starting point and the sector ceiling identified in Chapter 14 is precisely what the Protocol closes.

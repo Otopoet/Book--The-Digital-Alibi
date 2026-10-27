@@ -1,0 +1,188 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter{The Information Picture, What Was There, What Was Retrievable, What Was Missing}
+
+In October 2017, Boeing submitted the 737 MAX 8 for Federal Aviation Administration certification. The aircraft included a new system, the Manoeuvring Characteristics Augmentation System, MCAS, designed to adjust the aircraft's pitch automatically in certain flight conditions. The information about MCAS's full authority existed in Boeing's system description. The question the Joint Authorities Technical Review would subsequently ask was not whether that information existed. It was whether the FAA engineers who certified the aircraft had the information in a form that made its full significance reconstructible at the certification decision moment.
+
+The answer was no. The JATR report, published in October 2019 following both the Lion Air crash of October 2018 and the Ethiopian Airlines crash of March 2019, found that FAA certification engineers had not been presented with an adequate information picture of MCAS's behaviour outside its designed envelope. The system's ability to activate repeatedly, to override pilot inputs, and to operate on a single angle-of-attack sensor without redundancy, the features that were causally significant in both accidents, were not visible as a coherent risk picture in the certification documentation the engineers reviewed. The information existed. The information picture did not. Three hundred and forty-six people died in two crashes.
+
+The MCAS case is the most precisely documented modern example of what happens when the information picture presented at a decision moment does not reflect the information picture that exists in the system. It is not a case of deliberate concealment, the JATR found process failures, not fraud. It is a case of governance architecture: information distributed across multiple documents, none of which presented the complete picture of the system's behaviour in a form that allowed the significance to be assessed at the certification decision moment. That is the Information Picture failure. And it is the same failure that AI governance architectures are replicating today in every organisation that logs model outputs without capturing the complete picture of what the model knew, what it was not given, and what a decision-maker could have accessed in the time and form available to them.
+
+The same three-dimensional failure now resurfaces every time an AI-assisted decision is logged without a contemporaneous evidence bundle. What was there, what was retrievable, and what was missing, captured at the output moment, is the architecture that prevents the MCAS failure from repeating in the AI governance context. The three-part test that follows is that architecture, stated as an operational standard.
+
+\scenebreak
+
+\section{The Three-Part Test: A Framework for the Information Picture}
+
+The Information Picture element of the Digital Alibi has three dimensions, each of which must be addressed separately because each has distinct governance implications and distinct evidential consequences when the element is challenged.
+
+The three dimensions are: what was there, the data, model state, and parameters that existed at the output moment; what was retrievable, of the information that existed, what the named decision-maker could actually access, in what form, in the time available; and what was missing, the negative space, comprising data that was absent, stale, or structurally excluded from the model's information environment. All three must be captured contemporaneously. None of them can be reconstructed from what the system currently holds. And none of them, taken alone, constitutes a complete Information Picture.
+
+\begin{quote}
+\emph{The three-part test is not a taxonomy of convenience. Each dimension has a distinct legal consequence. ``What was there'' determines whether the system operated on adequate data. ``What was retrievable'' determines whether the decision-maker could have challenged it. ``What was missing'' is where the most serious claims concentrate. A governance record that answers only one or two of these questions has not captured the Information Picture.}
+\end{quote}
+
+A Digital Alibi is only as strong as its four elements, each of which must be present and survive cross-examination at the moment of decision. The Information Picture is the element that cross-examination will reach first, because it is the element that establishes what the system actually knew, as opposed to what it was designed to know or what it is documented as having known. The three-part test is the operational standard for that element.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{THE TRIAL-SCENE TEST, WHAT A MISSING INFORMATION PICTURE PRODUCES UNDER CROSS-EXAMINATION}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Counsel: ``Can you produce the Decision Identity record for the AI-assisted credit decision made on 12 May 2025 for this applicant?'' \\
+Witness: ``We have the decision output in our system.'' \\
+Counsel: ``Which version of the model produced it?'' \\
+Witness: ``We would need to check with the technology team.'' \\
+Counsel: ``What data was the model given for this applicant?'' \\
+Witness: ``The standard data inputs.'' \\
+Counsel: ``What data was it not given?'' \\
+Witness: ``I'm not sure I can answer that.'' \\
+Counsel: ``You cannot tell this court what your system knew, which version it was, or what it could not see at the moment it produced the output that led to my client's application being declined. Is that correct?'' \\
+This exchange is not hypothetical. It is the output-moment question, asked in adversarial conditions, of an organisation without a Digital Alibi architecture. The information that would have answered it was not captured at the decision moment. It cannot be captured now. \\
+\end{longtable}
+
+\scenebreak
+
+\section{What Was There: The Data Question}
+
+``What was there'' is the positive record dimension of the Information Picture. It asks: at the output moment, what data inputs, training data vintage, model state, and operational parameters existed and were active in the AI system? This is the dimension most organisations make some attempt to address through model logging and data lineage tracking, and the dimension most frequently misunderstood as sufficient when partially implemented.
+
+The positive record has four components that must all be captured at the output moment, not assembled retrospectively from current system states.
+
+\textbf{13.1 Data inputs} The complete set of data presented to the model for this specific output: the values of each input feature, the source and vintage of each data element, and the form in which raw data was transformed before model ingestion. Data vintage is operationally significant: a credit model given income data current to six months ago operated on a different information picture from the same model given current income data. The vintage must be captured for each data element at the output moment.
+
+\textbf{13.2 Model state} The specific version of the model deployed at the output moment, including the training data it was trained on and the date to which that training data was current, the last validation date and the performance characteristics established at that validation, and any post-deployment adjustments, recalibration, threshold changes, parameter modifications, applied since the last full retraining. The model state captures what the model has learned and when it learned it.
+
+\textbf{13.3 Operational parameters} The configuration under which the model operated at the output moment: the decision thresholds, the feature weights if those are configurable at deployment, the output format and confidence threshold, and any operational constraints applied, exclusion lists, override rules, jurisdictional restrictions. Parameters that change between deployments must be captured at the output moment because a model operating with different threshold settings produces a different decision environment even at the same model version.
+
+\textbf{13.4 Context and environment} The operational context in which the output was produced: the time, the channel, the interface through which the input data was received, and any real-time data feeds active at the output moment. A fraud detection model operating during a period of elevated transaction volume is in a different operational environment from the same model operating at baseline volume, and the context must be captured if the output is to be fully interpretable at the decision moment.
+
+The most common implementation failure in the ``what was there'' dimension is the conflation of the model's current state with its state at a specific historical output moment. When an organisation produces its model documentation for a regulatory examination, it typically produces what the model currently is, its current version, its current training data, its current parameters. If the model has been updated since the challenged decision was made, the current documentation does not reflect the information picture at the decision moment. It reflects a subsequent state. An organisation whose model logging captures current state rather than output-moment state has an archive, not a Digital Alibi.
+
+The data vintage failure is the most frequently encountered form of this conflation in consumer credit. A bank's income verification model is retrained quarterly on updated credit bureau data. A borrower challenges a lending decision made in February on the grounds that the model's assessment of their income stability was materially inaccurate. The bank produces its model documentation, which reflects the April retrain. The April model was trained on bureau data current to March. The February decision was made by the January model, trained on bureau data current to December. The income data that the January model used for this borrower's assessment was eight months old at the decision moment. The April documentation shows a model with different training data vintage and different performance characteristics. It is not the model that made the February decision. Without output-moment model-state capture, the bank cannot demonstrate what the January model knew, what vintage its income data was, or what the performance characteristics of that version were at the moment it produced the output the borrower is challenging.
+
+\scenebreak
+
+\section{What Was Retrievable: The Accessibility Question}
+
+``What was retrievable'' is the dimension that most AI governance practitioners have not yet identified as a distinct evidential requirement, and that the MCAS case illustrates with devastating precision. It asks: of all the information that existed at the output moment, what could the named human decision-maker have accessed, in what form, within the time available before the decision was taken?
+
+The distinction between ``what was there'' and ``what was retrievable'' is the distinction between information that exists in an organisation's systems and information that was available to the decision-maker at the decision moment. These are not the same. Information can exist in a database the decision-maker has no access to. It can exist in a format the decision-maker cannot interpret without specialist knowledge. It can exist in a report that was not prepared in time for the decision. It can exist in a system that would have required a manual query to retrieve and that the decision-maker did not know was relevant. In each case, the information exists. It is not part of the retrievable information picture at the decision moment.
+
+The MCAS case illustrates the ``what was retrievable'' failure with architectural precision. The information about MCAS's full authority existed in Boeing's system safety analysis and in the FMEA documentation. But the FAA certification engineers reviewed the system's safety submissions in the form Boeing presented them, which distributed the information across multiple documents in a way that made the complete picture of MCAS's behaviour non-reconstructible within the certification review process. No individual document was false. The aggregate information picture that should have been available to the certifying engineers at the certification decision moment was not retrievable from what they were given.
+
+\begin{quote}
+\emph{Information that exists in an organisation's systems but is not accessible to the named decision-maker, in an interpretable form, within the time available for the decision, is not part of the retrievable information picture. It is part of the organisation's liability. The gap between what exists and what was retrievable is where the governance failure concentrates.}
+\end{quote}
+
+\textbf{13.5 Decision-maker access} What data and outputs the human reviewer was able to access independently of the AI system's own output: whether they had access to the underlying input data, the model's confidence interval, alternative model outputs, or only to the model's primary recommendation. A reviewer who saw only the score and the recommended decision was in a materially different information position from a reviewer who had direct access to the input data.
+
+\textbf{13.6 Form of presentation} The format in which information was presented to the decision-maker: whether the AI output was accompanied by an explanation, a confidence indicator, a visualisation of the key drivers, or raw scores without contextual interpretation. A fraud score presented without the features that drove it is in a different retrievable information picture from the same score presented with the top five contributing factors.
+
+\textbf{13.7 Time and cognitive capacity} The time available for the decision-maker to review the information presented, and the decision volume they were processing at the same period. A reviewer processing decisions at a rate of three per minute could not have retrieved and interpreted supplementary information even if it was technically accessible. The retrievable information picture is constrained by what was realistically accessible given the decision-maker's capacity at the output moment.
+
+The practical governance implication of the ``what was retrievable'' dimension is that the governance architecture must be designed to produce an accessible, interpretable, decision-relevant information picture, not merely to make information technically available. A system that logs all model inputs and outputs in a database accessible to compliance teams but presents human reviewers with only a score and a recommended action has created an information gap between what exists and what was retrievable. That gap is the Digital Alibi failure in the retrievability dimension, and it is where post-hoc governance justifications typically fail: the information was available to the organisation, but not to the decision-maker at the decision moment.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{RETRIEVABILITY, SIX QUESTIONS FOR A CHIEF RISK OFFICER}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. At the moment a reviewer approved an AI output in any material decision process last month, what information were they shown, score only, or score with contributing factors and confidence interval? \\
+2. Was the reviewer able to access the underlying input data independently, or were they dependent on the AI system's own summary of what it was given? \\
+3. How many AI-assisted decisions was the reviewer processing per hour at the time of each approval? Could a reviewer processing at that rate have meaningfully interrogated the information available to them? \\
+4. Is the form of presentation captured in the governance record, not just that a review occurred, but what the reviewer was shown and in what format? \\
+5. If a regulator asked for the information picture as it was retrievable to the decision-maker at a specific output moment three months ago, could we produce it in less than five working days without manual reconstruction? \\
+6. If the answer to Question 5 is no, the retrievability requirement is not met, regardless of what information exists elsewhere in the system. \\
+\end{longtable}
+
+\scenebreak
+
+\section{What Was Missing: The Negative Space}
+
+``What was missing'' is the dimension of the Information Picture that is most frequently absent from AI governance frameworks and most consistently the focus of regulatory examination and litigation. It asks: what information, if present, would have been relevant to the AI system's output, but was absent, excluded, or structurally invisible to the system at the output moment?
+
+The negative space is not simply the absence of information. It is a specific, documentable set of absences, each of which has a potential causal relationship to the decision that was made. A credit scoring model that was not given rental payment history made a creditworthiness assessment in the absence of information that would have been relevant to that assessment. An insurance pricing model that was not given mental health condition data produced a risk profile without that information. An employment screening model that was not given information about career gaps produced a candidate ranking with a structural blind spot. In each case, the negative space, the specific information the system could not see, is as evidentially significant as what it was given.
+
+The negative space is where discrimination claims concentrate because it is where the explanation for systematically adverse outcomes in protected groups is most likely to be found. A model that undervalues rental payment history will produce adverse credit outcomes for renters, who are disproportionately concentrated in lower-income and younger demographic groups. A model that does not account for career gaps will produce adverse outcomes for candidates whose careers were interrupted by caring responsibilities, which disproportionately affects women. The negative space is not neutral. It encodes the structural absences of the training data and the design decisions made about what to include and exclude from the model's information environment.
+
+\textbf{13.8 Data absences} A contemporaneous record of the data fields that were not populated for this specific output: missing values, null fields, data sources not connected at the output moment, and data elements that the model would have used if available but were absent for this specific input. This must be captured at the output level, not inferred from schema documentation.
+
+\textbf{13.9 Design exclusions} The data elements that were explicitly excluded from the model's information environment by design: features considered and rejected during model development, data sources not integrated, population segments not represented in the training data. These are fixed properties of the model but must be documented as part of the output-moment information picture because they define the structural limits of what the model could have known.
+
+\textbf{13.10 Stale data} Data elements that were present and contributed to the output but whose vintage made them potentially misleading at the output moment: income data from a year ago used for a credit decision today, risk assessment data from a market environment no longer applicable, demographic data not updated since the last census. Stale data is not absent, but its contribution to the information picture requires its vintage to be captured.
+
+\textbf{13.11 Emergent exclusions} Data elements that were not excluded by design but were not available at the output moment due to operational factors: a data feed that was temporarily interrupted, an API call that returned an error, a third-party data source that had not yet been updated for a specific entity. Emergent exclusions are captured by the data absence record (13.8) but require distinction from design exclusions because their governance implication is different, a data feed failure is an operational risk event, not a design decision.
+
+The most significant governance implication of the ``what was missing'' dimension is that it must be captured as a positive record, not inferred from the absence of a record. A governance architecture that logs what the model was given but does not record what it was not given leaves the negative space invisible. When a regulator or litigant asks ``what did the system not know?'', the answer from a governance record that captures only the positive inputs is: we do not know what we did not know. That answer is not a defence. It is the finding.
+
+The insurance sector provides the most operationally clear illustration. A commercial property insurer deploys an AI pricing model that ingests structured submission data from brokers, building details, occupancy type, construction materials, claims history. For a specific submission, the broker's data pack contains a note that the property recently underwent a change of occupancy not yet reflected in the structured data fields. The note exists as an unstructured text attachment. The model cannot process unstructured text. The occupancy change does not reach the model's information environment. The model produces a premium recommendation on the basis of the previous occupancy type. The underwriter approves the recommendation. The policy is bound.
+
+Eighteen months later, a fire claim is submitted. The insurer reviews the original underwriting decision. The premium was set for the previous occupancy, a lower risk category. The actual occupancy at the time of binding was materially higher risk. The question the claims team, and potentially a court, will ask is whether the underwriter knew, or should have known, about the occupancy change at the time of binding. The structured data the model processed shows no occupancy change. The unstructured attachment, which existed in the submission pack, was not part of the model's information environment. The negative space record, if it existed, would show: unstructured text not processed; occupancy change note present in submission but outside model scope. That record establishes what the system could not see. Without it, the governance position is that the model saw everything it was given, which is true but incomplete. The negative space is where the liability concentrates.
+
+\begin{quote}
+\emph{The negative space must be captured as a positive record, a contemporaneous document of what the system could not see, at the moment it could not see it. A governance architecture that logs only what the model was given cannot answer the negative space question. And that question is where the most serious claims concentrate.}
+\end{quote}
+
+\scenebreak
+
+\section{The MCAS Parallel: All Three Dimensions in a Single Failure}
+
+The Boeing 737 MAX MCAS certification failure is the most forensically complete illustration of all three Information Picture dimensions failing simultaneously in a governance decision, and it is worth examining as a unified case rather than as three separate failures.
+
+What was there: the MCAS system description, safety analysis, and failure mode effects analysis existed in Boeing's documentation. The information about MCAS's authority, its use of a single angle-of-attack sensor without redundancy, and its ability to activate repeatedly, the features causally significant in both crashes, was present in the technical record.
+
+What was retrievable: the FAA certification engineers were not presented with a consolidated information picture that made the significance of these features visible as a coherent risk. The relevant information was distributed across multiple documents in the certification submission, none of which individually surfaced the interaction between MCAS's authority and the single-sensor architecture as a critical safety risk. The JATR found that FAA engineers lacked adequate understanding of MCAS's operational characteristics, not because the information did not exist, but because it was not presented in a retrievable form at the certification decision moment.
+
+What was missing: the JATR also found that the assumption about pilot response time embedded in the safety analysis, that pilots would recognise and respond to a runaway trim situation in four seconds, was not adequately supported by the operational context data available at the certification moment. The information about realistic pilot response times in novel failure scenarios was absent from the certification information picture. That absence was a negative space that shaped the safety analysis and the certification decision.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{THE MCAS THREE-PART TEST, APPLIED TO AI GOVERNANCE}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+What was there: all model documentation, training data records, and parameter configurations must exist in a form that can be retrieved for any specific output moment, not as current documentation but as documentation current at the output moment. If the model was updated after the challenged decision, the pre-update documentation must be separately retrievable. \\
+What was retrievable: the information presented to the human decision-maker, the AI output, its confidence indicator, the key features driving it, and the supplementary information the reviewer could access, must be captured as it was actually presented, not as it could theoretically have been accessed. The form of presentation determines the retrievable information picture, not the theoretical accessibility of the underlying data. \\
+What was missing: the data elements that were absent, excluded by design, stale, or operationally unavailable at the output moment must be captured in a contemporaneous negative space record. This is not a list of what the model schema could theoretically accommodate. It is a record of what was actually not present for this specific output. \\
+The MCAS governance lesson: each of these three records must exist independently and must be reconstructible without reference to what the system currently holds. A system that has been updated, reconfigured, or decommissioned since the challenged decision carries no automatic record of its predecessor state. The output-moment Information Picture is the only evidence that will exist when the challenge arrives. \\
+\end{longtable}
+
+\scenebreak
+
+\section{Implementation: What Capturing the Information Picture Requires}
+
+An organisation that accepts the three-part test as the governing standard for its Information Picture must implement governance architecture that captures all three dimensions at the output moment, automatically, for every material AI-assisted decision. This is not a retrospective exercise. The Information Picture is created once, at the output moment, and does not change after that moment. What is not captured at the output moment cannot be captured at all.
+
+The technical requirements are specific. For the positive record, the organisation needs: model versioning that logs the deployed version at each output event, not just the current version; data lineage tracking that records the specific vintage and source of each input at the output moment; parameter logging that captures the operational configuration at the time of output; and output logging that records the complete model output including confidence indicators in the form presented to the decision-maker.
+
+For the retrievable information picture, the governance architecture must capture: the interface through which the output was presented to the human reviewer; the form in which supplementary information was accessible from that interface; and a timestamp record that enables the review duration to be established. This last requirement is the one most frequently omitted, review duration is the evidence that the retrievable information picture was actually used, rather than technically available.
+
+For the negative space, the architecture requires: data absence logging at the output level, recording which expected inputs were null, missing, or below quality thresholds for this specific output; a design exclusion register that forms part of each output record; and a data vintage flag that identifies inputs whose age exceeded a defined threshold at the output moment. The negative space record does not need to be extensive. It needs to be specific and contemporaneous.
+
+None of these requirements are technically novel. Model versioning, data lineage, parameter logging, and output capture are all established capabilities in mature MLOps platforms. The governance gap is not in the availability of the technology. It is in the decision to implement it at the output-moment level for every material decision, rather than at the system level for periodic governance reviews. The former produces a Digital Alibi. The latter produces a governance record that will not survive the three-part test.
+
+The off-the-shelf MLOps capabilities that address each dimension are specific. For the positive record: model registries with version pinning at inference time (MLflow, Weights \& Biases, AWS SageMaker Model Registry) capture model state at the output moment if configured to log at inference rather than deployment. Data lineage platforms (Apache Atlas, Collibra, Alation) capture data vintage and source provenance if connected to the inference pipeline rather than only to the training environment. For the retrievable information picture: feature stores with point-in-time retrieval (Feast, Tecton, Hopsworks) can reconstruct the exact feature set a model received at a historical output moment without requiring manual query. For the negative space: data quality monitoring tools (Great Expectations, Monte Carlo) can be configured to log null fields and quality failures at inference time rather than only during batch validation. The technical capability exists. The governance decision is whether to configure it at output-moment resolution for material decisions.
+
+\scenebreak
+
+\section{Locating the Organisation in the Governance Landscape}
+
+Chapter 13 has provided the operational framework for the most technically demanding element of the Digital Alibi standard. The Information Picture, what was there, what was retrievable, and what was missing, is the element that requires the deepest governance architecture and the one that most directly determines whether a challenged decision can be defended from the contemporaneous record.
+
+Chapter 14 introduces the Governance Classification, the A·E·C·R·M framework, as the diagnostic tool for establishing where an organisation sits across all five dimensions of its governance position, not just the Information Picture. The Governance Classification produces a governance address that is specific, comparable, and directly mapped to the regulatory requirements the organisation faces. It is the tool that turns the argument of this book into a diagnostic that a board can use to determine what it must do, in what order, and with what urgency.

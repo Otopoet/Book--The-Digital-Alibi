@@ -1,0 +1,162 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter{Material AI Decisions, What They Are and Where They Are Hiding}
+
+Ask any board that has approved AI deployment whether they know which of their decisions are material for Digital Alibi purposes. Most will say yes. Most will be wrong.
+
+The gap is not dishonesty. It is the predictable result of how AI is deployed in practice. Boards approve AI strategy, AI investment, and sometimes specific AI systems. They are rarely given a complete account of every AI system currently contributing to decisions that affect individuals, regulatory obligations, or organisational liability. They do not receive that account because no single function in most organisations holds it. The technology team knows which systems are in production. The compliance function knows which systems are in regulatory scope. The business units know which systems they use day to day. None of these inventories is complete, and they are rarely consolidated at a level that allows a board to form an accurate view of its full AI-assisted decision landscape.
+
+Chapter 12 establishes the definition of a material AI-assisted decision, identifies where those decisions are concentrated by sector, and examines three categories of material decision that are most commonly absent from board-level AI inventories: shadow AI, vendor-embedded AI, and decisions whose individual outputs appear routine but whose aggregate effect is material. It closes with a practical decision inventory framework that a board can use to establish an accurate picture of its exposure.
+
+\scenebreak
+
+\section{Defining Materiality: Three Dimensions}
+
+A material AI-assisted decision, for Digital Alibi purposes, is one whose AI-assisted output contributes to a determination that has one or more of three categories of consequence: consequences for individuals whose rights, interests, or circumstances are affected by the determination; consequences for the organisation's regulatory compliance obligations; or consequences for the organisation's legal liability.
+
+These three dimensions are independent and cumulative. A credit scoring decision is material on all three simultaneously: it affects the individual whose application is scored, it engages regulatory obligations under the Consumer Duty and the EU AI Act's high-risk classification, and it creates legal liability for the lender if the decision is subsequently found to have been made on an inadequate or biased information picture. A supplier shortlisting decision in a large procurement exercise may be material only on the third dimension, legal liability, if the disappointed supplier has grounds for challenge. A clinical triage AI decision is material on all three. The materiality test does not require all three dimensions to be engaged, but each dimension that is engaged independently establishes the Digital Alibi obligation for that decision.
+
+The common thread across all three dimensions is consequence. A decision is material if its AI-assisted output makes a difference to something that the law, regulation, or the affected party can hold the organisation accountable for. The board's question is not ``do we use AI for this?'', it is ``does our AI output contribute to a determination with those consequences?'' The answer is almost always yes for the decision categories that follow.
+
+\begin{quote}
+\emph{A material AI-assisted decision is not defined by the technology that produces it or the process that reviews it. It is defined by the consequence of the determination it contributes to. If the output affects an individual's rights, engages a regulatory obligation, or creates a legal liability, the Digital Alibi standard applies.}
+\end{quote}
+
+\scenebreak
+
+\section{The Regulatory Floor: EU AI Act High-Risk Classification}
+
+The EU AI Act provides the most specific and enforceable regulatory definition of material AI decisions currently in force for organisations within its scope. Its Annex III high-risk classification designates eight categories of AI system as high-risk for the purposes of the Act's obligations, with a further category of general-purpose AI systems subject to additional requirements under Article 51. The high-risk categories are:
+
+Biometric identification and categorisation of natural persons. AI systems used in remote real-time biometric identification in publicly accessible spaces, and systems used for post-remote biometric identification where law enforcement is involved.
+
+Critical infrastructure. AI systems used as safety components in the management and operation of critical infrastructure in road traffic, water, gas, heating, and electricity supply.
+
+Education and vocational training. AI systems used to determine access to and assignment in educational and vocational training institutions, and to assess learning outcomes including to steer the learning process.
+
+Employment, workers management, and access to self-employment. AI systems used for recruitment or selection of natural persons, for making decisions affecting conditions of employment, promotion, or termination of contracts, for task allocation and for monitoring and evaluating performance or behaviour.
+
+Access to and enjoyment of essential private services and essential public services and benefits. AI systems used for creditworthiness assessment; AI systems used to dispatch or establish priority in the dispatch of emergency first response services; AI used in public benefit and social services administration.
+
+Law enforcement and migration, asylum and border control management and administration of justice.
+
+The practical implication for a regulated organisation is that if it deploys AI in any of these categories, it is operating a high-risk AI system under the Act, with the full suite of obligations the Act imposes, and the Digital Alibi standard is the evidentiary floor at which those obligations must be met. The EU AI Act compliance programme establishes the system-level governance requirements. The Digital Alibi architecture establishes what those requirements look like at the output moment for each individual decision.
+
+The EU AI Act's high-risk categories are the regulatory minimum definition of material AI decisions. They are not the complete definition. Many AI-assisted decisions that fall outside the Act's high-risk categories are material for Digital Alibi purposes under the three-dimension test above. The Act defines the floor; the three-dimension test defines the full scope.
+
+\scenebreak
+
+\section{Where Material Decisions Are Concentrated: A Sector Taxonomy}
+
+The following table maps the most common categories of material AI-assisted decision by sector. It is not exhaustive, the deployment of AI in material decision processes is expanding faster than any taxonomy can track. It is intended as a starting framework for the decision inventory process described later in this chapter.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1182}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8818}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Sector}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Common material AI decision types}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Financial Services} & Credit scoring and lending decisions; fraud detection and transaction blocking; AML transaction monitoring and suspicious activity reporting; investment recommendation and suitability assessment; insurance pricing and underwriting; claims triage and settlement. \\
+\textbf{Insurance (Lloyd's)} & Specialty risk pricing and exposure assessment; cat model output integration and catastrophe risk aggregation; claims validation and fraud detection; reinsurance pricing and LMX spiral exposure assessment. \\
+\textbf{Aviation} & Maintenance scheduling and airworthiness assessment; crew fatigue risk scoring and rostering; demand forecasting and revenue management; load optimisation and fuel planning. \\
+\textbf{Healthcare} & Clinical triage and patient prioritisation; diagnostic image analysis and decision support; treatment pathway recommendation; medication dosing and interaction screening; clinical trial participant selection. \\
+\textbf{Hiring and HR} & CV screening and candidate shortlisting; candidate risk scoring and employability assessment; attrition prediction and retention targeting; performance assessment and promotion recommendation. \\
+\textbf{Public Sector} & Benefits eligibility assessment; planning application scoring; social care risk assessment; enforcement prioritisation; procurement supplier ranking. \\
+\textbf{Legal and Professional Services} & Contract risk scoring; litigation outcome prediction; due diligence document classification; regulatory compliance screening. \\
+\end{longtable}
+
+Two observations about this table are operationally significant. First, every sector listed requires organisations deploying AI in the listed decision types to meet the Digital Alibi standard, either because the EU AI Act's high-risk classification applies, or because the three-dimension materiality test is engaged, or both. Second, none of the decision types listed are unusual or experimental deployments. They are all in active use in regulated organisations today, in many cases without board-level visibility of the full Digital Alibi obligation they create.
+
+\scenebreak
+
+\section{Where Material Decisions Are Hiding}
+
+A board that has reviewed the sector taxonomy above and concluded that its material AI decision inventory is complete is almost certainly wrong. The three categories of hidden material decision that boards most consistently fail to surface are shadow AI, vendor-embedded AI, and the aggregation problem.
+
+\section{Shadow AI}
+
+Shadow AI is the category of AI systems deployed within an organisation without formal governance approval, ypically as productivity tools adopted by individual teams or business units, or as features integrated into software the team was already licensed to use. Shadow AI is not usually deployed with malicious intent. It is deployed because it is available, because it improves individual productivity, and because the formal governance approval process is slow, opaque, or perceived as an obstacle to legitimate work.
+
+The Digital Alibi exposure created by shadow AI is not theoretical. A legal team that uses a large language model to summarise contract terms and inform a negotiation position has introduced AI into a material decision process. If the summary contains an error that leads to an unfavourable contract term, the organisation's liability may depend on what information the AI system was given, what it produced, and what the lawyer did with the output, none of which will be in a contemporaneous Digital Alibi record if the system was never in the formal AI inventory.
+
+Shadow AI is not a technology governance problem alone. It is a board governance problem, because the board's approved AI strategy and governance framework does not cover decisions made by systems it does not know exist. The Exposure facet of the Governance Classification, which assesses the completeness and currency of an organisation's AI systems inventory, is the diagnostic tool for the shadow AI problem. An organisation that self-assesses at E3 (all AI systems identified) on the basis of its formal AI inventory frequently discovers, when a systematic surfacing exercise is conducted, that it is operating at E2 (production systems mapped; third-party and shadow AI unmonitored). The gap between E3 and E2 is the shadow AI gap.
+
+\begin{quote}
+\emph{An organisation's formal AI inventory describes the AI decisions it has approved. Its actual AI decision landscape includes every decision being made with AI assistance, whether approved or not. The gap between those two inventories is the shadow AI exposure. Most boards do not know the size of that gap.}
+\end{quote}
+
+\section{Vendor-Embedded AI}
+
+Vendor-embedded AI is AI functionality integrated into licensed software platforms that organisations use for operational processes, CRM systems, HR platforms, legal research tools, underwriting workbenches, and clinical decision support environments. The AI functionality is not always prominently disclosed. It may be described as a feature enhancement, an intelligent automation, or a decision-support capability, rather than as an AI system subject to EU AI Act obligations or the Digital Alibi standard.
+
+The governance exposure is acute because vendor-embedded AI sits outside the organisation's direct control but inside its legal accountability. When a mortgage broker's CRM platform uses an AI model to score customer enquiries for advisor attention prioritisation, and a customer whose enquiry was deprioritised subsequently challenges the outcome of their mortgage application, the organisation that deployed the CRM platform is accountable for the AI-assisted decision it contributed to, even if it did not design, configure, or explicitly approve the AI model embedded in the platform. The Vanishing Vendor scenario from Chapter 11 is most likely to arise in the vendor-embedded AI context: the vendor provides the system, the organisation uses it, and when the vendor changes, the model documentation disappears.
+
+The practical identification question is: does each of the licensed software platforms our organisation uses for material operational processes include AI functionality that contributes to decisions with individual, regulatory, or legal consequences? The answer, for most organisations operating modern SaaS platforms, is yes. The follow-up question is: is the AI functionality in each of those platforms inventoried, governed, and subject to a Digital Alibi architecture? The answer, in most cases, is no.
+
+\section{The Aggregation Problem}
+
+The third category of hidden material decision is the most structurally complex. It comprises AI-assisted decisions that are individually routine, no single output produces a material consequence for any individual, but whose aggregate effect across a population is material and whose individual output-moment records would be the only evidence available to investigate that aggregate effect.
+
+A fraud detection model that flags transactions for manual review is making individual flagging decisions, each of which appears routine: a transaction is flagged or it is not, reviewed or it is not, cleared or it is not. No individual flagging decision appears to require a Digital Alibi, the consequence for any individual transaction is minor. But if the model's flagging rate is systematically higher for transactions associated with specific customer demographics, the aggregate effect is discriminatory and the legal liability is substantial. The only evidence available to investigate that aggregate pattern is the collection of individual output-moment records, what information the model had for each specific transaction, what it produced, and on what basis. If those individual records were not captured because each individual decision appeared routine, the aggregate discrimination cannot be established or defended against from the contemporaneous record.
+
+The aggregation problem means that the materiality test cannot be applied decision by decision in isolation. An organisation must ask not only ``is this individual decision material?'' but ``would the aggregate pattern of these decisions, if subsequently found to be discriminatory or systematically biased, be material?'' If the answer to the second question is yes, and it almost always is for any AI system operating at volume on decisions affecting individuals, the individual output-moment records are material, even if no individual decision appears to be.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{ALGORITHMIC REDLINING, THE AGGREGATION PROBLEM IN FINANCIAL SERVICES}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+The scenario: a retail bank uses an AI pricing model to make micro-adjustments to personal loan interest rates. The model processes hundreds of variables and produces rate adjustments in increments of a few basis points, amounts that no individual borrower would notice or challenge. No single decision is material. The largest individual rate adjustment is 0.3 percentage points. \\
+The aggregate effect: an analysis of twelve months of loan pricing decisions finds that the model's micro-adjustments, applied at scale, have produced a pattern in which borrowers in postcodes with high proportions of residents from specific ethnic backgrounds are systematically priced at rates 0.8 to 1.2 percentage points above otherwise comparable borrowers in other postcodes. The postcode variable is not explicitly protected, but it functions as a proxy for protected characteristics in the model's output. \\
+The Digital Alibi problem: no individual pricing decision was flagged for governance review because no individual adjustment exceeded any materiality threshold. The output-moment records for individual decisions were not captured at the level required to establish what information the model used for each specific borrower. The aggregate pattern exists in the data. The individual-level evidence required to investigate it, what the model knew at each output moment for each specific loan, does not. \\
+The legal position: a class action on behalf of the affected borrowers requires the bank to demonstrate, for each individual pricing decision, what information the AI system used and what alternative pricing the same borrower would have received without the postcode variable. The bank cannot produce this evidence. The individual decisions were not material. Their aggregate effect is. The Digital Alibi architecture was never built because the individual decisions appeared routine. \\
+The board lesson: the materiality test must be applied to the aggregate pattern that a system's decisions could collectively produce, not to each individual output in isolation. If the aggregate would be material, and systematically biased pricing at scale unambiguously is, the individual output-moment records are material from the first decision. Building the Digital Alibi architecture after the aggregate pattern is identified is building it after the liability has accumulated. \\
+\end{longtable}
+
+\scenebreak
+
+\section{Building the Decision Inventory: A Framework for Boards}
+
+The decision inventory is the board's working document for establishing an accurate account of its material AI-assisted decision landscape. It is not a technology audit or a model register. It is a governance document that maps AI-assisted outputs to the decisions they contribute to, and assesses each category against the three-dimension materiality test.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{THE DECISION INVENTORY: FIVE QUESTIONS FOR EVERY AI-ASSISTED PROCESS}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. What decisions does this AI system's output contribute to, directly or indirectly? If the output is used as one input among several in a decision process, it still contributes to a material decision if that decision meets the three-dimension test. \\
+2. Who is affected by those decisions, and what are the consequences for them? Individual rights, financial position, employment status, benefit entitlement, health outcomes, any of these establishes the individual-consequences dimension of materiality. \\
+3. Which regulatory obligations are engaged? EU AI Act high-risk classification, FCA Consumer Duty, SM\&CR personal accountability, GDPR Article 22 automated decision rights, identify which apply and confirm the Digital Alibi standard is required. \\
+4. What is the aggregate effect of these decisions across the population the system affects? Even if no individual output is material in isolation, the aggregate pattern may be, and the individual output-moment records are the only evidence that could establish or refute a systemic claim. \\
+5. Is this AI system in our formal AI inventory? If not, it is shadow or vendor-embedded AI. Add it. The formal inventory is the scope boundary for the Digital Alibi architecture. If a system is outside that boundary, no Digital Alibi exists for the decisions it contributes to. \\
+\end{longtable}
+
+The decision inventory should be maintained as a living document, reviewed at minimum quarterly and updated within thirty days of any new AI system deployment, any change to the operational configuration of an existing system, or any change in the regulatory environment that affects the high-risk classification of systems already in use. The quarterly review should specifically address the shadow AI question, whether any new AI functionality has been deployed in material decision processes without formal governance approval in the preceding period.
+
+A board that has completed the decision inventory exercise for the first time will, in most cases, find that its actual material AI decision landscape is larger than its formal AI governance programme covers. That gap is the governance exposure the Digital Alibi protocol must close. The size of the gap is not a reason for alarm, it is a reason for prioritisation. Chapter 14 introduces the Governance Classification as the framework for prioritising the gap closure by sector, by exposure level, and by regulatory urgency.
+
+\scenebreak
+
+\section{From Identification to Evidence: The Information Picture}
+
+Chapter 12 has established which decisions require the Digital Alibi standard and why many of them are currently outside the formal AI governance programme. Chapter 13 examines the Information Picture element in its full operational depth, what it means to capture what was there, what was retrievable, and what was missing at each output moment, and why this is the element that most AI governance architectures address least.
+
+The Information Picture is the most technically demanding element to implement and the most evidentially significant element when a decision is challenged. Chapter 13 provides the operational framework for building it, illustrated by a case study drawn from the Boeing 737 MAX MCAS certification, the most precisely documented example of what happens when the information picture presented to a decision-maker does not reflect the information picture that existed in the system.

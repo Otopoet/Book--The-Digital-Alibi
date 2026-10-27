@@ -1,0 +1,210 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter{The Digital Alibi, Defining the Gap}
+
+Before this chapter ends, a solicitor's letter will have arrived. It will ask four questions. The organisation receiving it will not be able to answer any of them from contemporaneous evidence. That is not a prediction. It is already happening. This chapter explains why, and what the four things are that would have prevented it.
+
+The word is Latin. Alibi means elsewhere.
+
+In English criminal law, an alibi is one of the most precisely defined concepts in the evidentiary canon. It is not an argument about innocence. It is not a character reference or a procedural objection. It is a demonstration of location, contemporaneous evidence, specific and verifiable, that the defendant was somewhere other than the scene of the alleged act at the moment it occurred. The alibi does not address the question of who committed the act. It addresses only presence. It establishes where the defendant was, at a specific moment, with evidence that existed at that moment.
+
+That precision is exactly what this book borrows.
+
+The Digital Alibi is the contemporaneous, forensically reconstructible evidence of your organisation's information position at the moment a specific AI-assisted decision was made. It is not a governance framework. It is not a documentation policy. It is not an audit report commissioned after an incident. It is evidence, specific, timestamped, and intact, of four things that must have existed, been captured, and remained retrievable at the decision moment.
+
+Chapter 1 established that most boards deploying AI in material decision processes cannot currently produce this evidence. This chapter defines it. With precision. Because the gap between what organisations currently have and what a Digital Alibi requires is not a matter of degree. It is a matter of kind.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Why This Word and Not Another
+
+The existing vocabulary of AI governance, audit trail, decision log, model documentation, governance record, describes something real. None of it describes a Digital Alibi. The difference is not semantic. It is structural, and it matters because the wrong word produces the wrong architecture.
+
+An audit trail is a record of events assembled after those events from the systems that recorded them. Its purpose is retrospective: to enable someone to reconstruct what happened. A reconstruction is not a Digital Alibi. A Digital Alibi is the original evidence, captured at the event moment, that makes reconstruction unnecessary.
+
+A decision log records what was decided, the output of a decision process, not the information picture that existed at its input. A log that records ``credit application rejected'' tells an examiner what the system recommended and what the human decided. It does not tell them what the system knew, what version of the model produced the output, what the system could not see, or whether any human with genuine override authority reviewed the recommendation before the decision was taken.
+
+Model documentation describes how a system is designed to operate, its training data, its intended use, its performance characteristics at the time of its last evaluation. It is prospective by nature: a description of intent and design. It does not establish what the system was actually doing, with what parameters, at the specific moment a specific decision was made.
+
+Documentation describes intent. Defensibility requires evidence present at the moment of decision.
+
+These distinctions matter because the question that arrives in an incident, a regulatory inquiry, or a shareholder challenge is not answered by intent, design, or post-hoc reconstruction. It is answered only by contemporaneous evidence of what actually existed at the decision moment. The Digital Alibi is the only governance concept that addresses this specific evidentiary requirement. Every other term in the governance vocabulary describes something else.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+The Four Elements
+
+A Digital Alibi has four elements. All four must be present simultaneously, at the decision moment, in a form that is retrievable on demand. The absence of any single element is a Digital Alibi gap. An organisation with three of four elements has not achieved three-quarters of a Digital Alibi. It has achieved nothing that will satisfy the question when it arrives.
+
+\textbf{THE FOUR ELEMENTS OF A DIGITAL ALIBI, EACH REQUIRED IN FULL}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Decision Identity, which system, which version, which operational context, which output, which decision.
+\item
+  The Information Picture, what the system knew, what it processed, and critically, what it could not see.
+\item
+  The Human Oversight Record, who reviewed the output, what they were shown, what they were empowered to do, and what they decided.
+\item
+  The Accountability Chain, named individual accountability from system to board, documented at the decision moment, not assigned after.
+\end{enumerate}
+
+\section{Element 1: Decision Identity}
+
+Decision identity is the foundational element. Before any other aspect of a Digital Alibi can be established, the decision itself must be precisely identifiable. This requires four distinct pieces of information, all of which must be captured at the decision moment rather than reconstructed from memory or system records.
+
+The first is the AI system, not the product category or the vendor name, but the specific system, identified in a way that distinguishes it from all other systems the organisation deploys. The second is the version, the exact iteration of the model deployed at the moment the output was produced. This matters because AI systems change. A model retrained on updated data, fine-tuned on new examples, or updated with new parameters may produce materially different outputs from its predecessor. If you cannot identify the version, you cannot establish what the system was doing at the moment of the specific decision in question.
+
+The third is the operational context, what the system was configured to do at the time of the decision. An AI system deployed for credit scoring may operate under different parameter configurations for different customer segments, different risk thresholds at different times, or different data inputs across different deployment environments. The operational context specifies which configuration was active. The fourth is the causal connection, how the system's output contributed to the decision that was taken. Not just ``the system recommended X and we decided X,'' but the documented path from output to decision, including any human modification of the system's recommendation.
+
+EU AI Act Article 9 requires operators of high-risk AI systems to maintain a risk management system that includes a systematic examination of risks arising from possible changes in the AI system. That requirement has no operational content unless version-level traceability at the decision moment exists. Without it, the examination of risks from system changes cannot be tied to specific decisions, and the Article 9 obligation becomes a policy aspiration rather than an evidenced practice.
+
+Element 2: The Information Picture
+
+The information picture is the most operationally complex of the four elements and the one most consistently absent from existing governance architectures. It has two dimensions that are equally important and must both be captured at the decision moment.
+
+The first dimension is what the system knew, the data inputs, model state, and parameters that existed at the moment the output was produced. This is not the same as what data the system has access to in general, or what its training data contained, or what its model documentation says it uses. It is the specific data that was processed in the specific instance that produced the specific output. In a credit scoring system, this means the exact applicant data, the exact version of the credit bureau data accessed, and the exact parameter configuration active at the moment of that applicant's assessment. In a medical diagnosis support system, it means the specific patient data presented, the imaging results in the version uploaded, and the clinical context the system was given.
+
+The second dimension is what the system could not see, the data it was not given, the context it was not designed to consider, the inputs it was structurally blind to. This is the negative space, and it is as evidentially significant as the positive record. A credit scoring model that was not given rental payment history produced a creditworthiness assessment in the absence of that data. An insurance underwriting model that did not incorporate informal employment patterns produced a risk profile without that context. An employment screening model that was not given contextual information about career breaks produced a candidate assessment with a structural blind spot.
+
+The negative space is where discrimination claims live. A claimant alleging that an AI-assisted decision was biased or discriminatory will frequently focus not on what the system was told, but on what it was not told, and whether the organisation was aware of that absence at the moment of the decision. If the information picture does not record the negative space, the organisation cannot demonstrate that it was aware of and had assessed the risks of those structural absences. Awareness cannot be reconstructed from the absence of a record. It must have existed as a record at the time.
+
+The healthcare context makes this viscerally clear. An AI clinical decision support system assessing a patient for a standard treatment pathway may produce a confident recommendation, one that a clinician under time pressure is likely to follow. If that system was not given data about a rare underlying condition because that condition was coded differently in the patient's legacy records and not mapped to the system's data feed, the recommendation was produced in ignorance of a clinically material fact. The system did not know what it did not know. If the information picture at the output moment does not record that the rare condition data was absent from the feed, that the negative space existed, neither the clinician who acted on the recommendation nor the organisation that deployed the system can demonstrate, after an adverse outcome, that they were aware of the gap at the moment the recommendation was produced. The record of the negative space is the only evidence that distinguishes a system that was aware of its blind spots from one that was not.
+
+What the system could not see is as evidentially significant as what it did see. The negative space is where accountability claims concentrate.
+
+Element 3: The Human Oversight Record
+
+The EU AI Act's Article 14 requires that high-risk AI systems be placed under human oversight in a way that enables those responsible for the system to detect and correct failures. The UK AI Safety Framework's contestability requirement mandates that individuals affected by automated decisions can challenge those decisions through a human review process. The FCA's SM\&CR requires named senior managers to demonstrate active oversight of the AI systems within their accountability.
+
+Every one of these requirements is rendered unverifiable without a human oversight record that meets a specific evidential standard. The standard is not ``a human reviewed the AI output.'' It is four things: who reviewed the output (named individual, not role or team); what they were shown (the specific output, in the specific form it was presented at the moment of review, not a summary, not a dashboard average, but the actual output presented in the actual review interface); what they were empowered to do (specifically, did they have the authority, the information, and the time to override the system's recommendation, or was the review process structured in a way that made override practically impossible?); and what they decided (with the specific reasoning recorded at the time, not reconstructed from outcome data).
+
+The distinction between genuine oversight and performative oversight is the most consequential distinction in AI governance. A governance process in which AI outputs are routed through a human reviewer who has fifteen seconds, no independent data access, and no record of ever having overridden the system is not an oversight process. It is a sign-off process. The two look identical in policy documentation. They look entirely different when a regulator examines the human oversight record for specific decisions.
+
+Performative oversight, a rubber stamp with no evidence of genuine review capability, is not a mitigating factor when a governance failure is examined. It is an aggravating one. It demonstrates that the organisation deployed a governance architecture designed to produce the appearance of oversight without its substance. Courts and regulators recognise this pattern. The human oversight record must be able to demonstrate that the human in the loop was genuinely in a position to exercise judgement, not merely to ratify a recommendation.
+
+Element 4: The Accountability Chain
+
+Named individual accountability is the element that most directly connects the Digital Alibi to personal liability. It is also the element that is most frequently confused with organisational accountability.
+
+An accountability chain is not an organisational chart. It is not a statement that ``the CISO is responsible for AI security'' or ``the CTO owns technology risk.'' It is a named record, specific to the decision, documented at the moment of the decision, of which individual is accountable for each governance function in the chain from the AI system to the board. For a credit decision, that chain might run from the model owner (the individual responsible for the system's design and performance) through the decision process owner (the individual responsible for how the system's output is incorporated into credit decisions) to the risk function accountable executive (the individual who has accepted responsibility at board level for the risk this system represents). All three names must appear in the record. All three must be current at the decision moment, not organisationally possible in principle, but actually named, in the record, at the time.
+
+The FCA's Senior Managers and Certification Regime is explicit about why this matters. Under section 66A, a Senior Manager can be held personally liable for a regulatory breach that occurred in their area of responsibility unless they can demonstrate that they took reasonable steps to prevent it. The Accountability Chain is the infrastructure that makes this demonstration possible, or impossible. A Senior Manager whose name appears in a retrospectively assembled accountability chart, rather than in a contemporaneous governance record, cannot demonstrate that they were genuinely accountable at the moment of the decision. They can only assert it, and assertions are not evidence.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Temporal Requirement: Output Moment vs Decision Moment}
+
+The phrase ``at the moment'' is not rhetorical. It is the operative legal boundary between a Digital Alibi and everything else, and the distinction between two specific moments within that boundary is where most governance architectures fail.
+
+The output moment is when the AI system produces its result: the score, the classification, the recommendation, the flag. Everything the Digital Alibi must capture, the model version, the data inputs, the parameters, the negative space, exists in its final form only at this moment. After it, any of these may change. The output moment is the only moment they are all simultaneously fixed.
+
+The decision moment is when a human being acts on that output. Most governance architectures document this moment: what was decided, when, and by whom. That documentation is real governance work. But it is not a Digital Alibi. Documenting the decision moment without the output moment is equivalent to recording a verdict without recording the evidence presented at trial. The outcome exists. The basis for it does not.
+
+The legal vulnerability is direct. Every examiner's question in an AI governance challenge is anchored to the output moment: what did the system know, which version produced this result, who was accountable at that instant. An organisation that has documented the decision moment thoroughly but not the output moment has documented the consequence of the information picture, not the picture itself. That is the gap where regulatory exposure concentrates.
+
+Regulators and courts ask about the output moment. Most governance architectures document only the decision moment. The gap between the two is where liability concentrates.
+
+Aviation built the flight data recorder to capture the output moment of every critical system permanently, in real time, because reconstructing it after an incident had proved inadequate for justice or safety improvement. Clinical medicine built the contemporaneous clinical record because Bolam established that a doctor's duty of care is assessed at the output moment. Each industry initially resisted this standard as disproportionate. Each eventually accepted it as non-negotiable. The EU AI Act's high-risk obligations, in force since 2 August 2026, are the first formal mandate to approach the same standard for AI-assisted decisions. They will not be the last.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Documentation and Defensibility: Two Different Things}
+
+The most useful way to understand the Digital Alibi is to contrast it with what most organisations currently produce. The following comparison is not a criticism. It is a forensic description of the gap between governance that satisfies an audit and governance that survives an incident.
+
+\textbf{What organisations currently have:}
+
+\begin{itemize}
+\tightlist
+\item
+  Output documentation
+\item
+  Model documentation
+\item
+  Policy documentation
+\item
+  Batch-processed logs
+\item
+  Post-hoc human sign-off
+\end{itemize}
+
+This list represents genuine governance work. Organisations that have produced all of these things have invested significantly in AI risk management. None of it produces a Digital Alibi. Each item describes what was intended, what was designed, or what occurred in aggregate. None of it establishes what was known, who was accountable, and what was done, at the moment a specific decision was made.
+
+The distinction becomes concrete when the examiner's question arrives. An organisation with comprehensive documentation in the left column and no Digital Alibi architecture will spend weeks attempting to reconstruct an answer from that documentation. In Chapter 1, that organisation spent six weeks preparing for a regulatory meeting and still could not answer the question. The documentation told the story the organisation wanted to tell. The question asked for the evidence the moment produced.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{A Worked Example: The Credit Decision}
+
+Consider a mortgage lender that uses an AI system to produce credit risk scores as part of its residential mortgage assessment process. The system is well-governed by conventional standards. It has a model risk management framework. The model is validated annually. Outputs are reviewed by a credit officer before a decision is communicated to the applicant. The process is documented. The board has been briefed on AI risk.
+
+An applicant is declined. Three months later, the applicant's solicitor writes to the lender with a data subject access request under the UK GDPR and a preliminary allegation of algorithmic discrimination. The solicitor's letter asks for four things: the version of the AI system used to assess the applicant's specific application; the complete data inputs presented to that system at the moment of assessment, including any data the system was configured not to receive; the record of any human review of the system's output before the decision was communicated, including the reviewer's identity, what they were shown, and what authority they held to override the recommendation; and the name of the individual accountable for the decision at senior management level, as documented at the time.
+
+Without a Digital Alibi architecture, the lender cannot produce any of the four items in the form the solicitor has requested. It can produce the model documentation, which describes the system's general architecture but does not establish which version was active on the specific assessment date. It can produce the batch log for the assessment period, which records that the application was scored but does not isolate the specific data inputs for the specific assessment. It can produce the credit officer's daily sign-off record, which confirms that outputs were reviewed but does not establish what the officer saw for this specific application or what their authority to override was. It can produce the accountability framework, which names a Head of Credit Risk, but that person was appointed six weeks after the application was assessed.
+
+\textbf{HOW A CLAIMANT'S SOLICITOR DISMANTLES A BATCH-PROCESSED LOG UNDER CROSS-EXAMINATION}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ``This log records that your system processed 847 applications on the date in question. Can you tell me which entry corresponds to my client's application?''
+\item
+  ``Can you confirm which version of the model was running at the time this entry was generated, given your model was updated three times in the preceding six months?''
+\item
+  ``The log shows a score of 42. Can you produce the specific data inputs, the exact credit bureau snapshot, the income verification data, the rental history, that the system processed to produce that score for my client specifically?''
+\item
+  ``You have told the court a credit officer reviewed AI outputs. Can you name the officer who reviewed my client's score, confirm what they were shown, and produce any record of whether they had the authority to override a score of 42?''
+\end{enumerate}
+
+Each question is unanswerable from the batch log alone. Each silence is a finding. The batch log proves the process existed. It proves nothing about the decision.
+
+The solicitor has not yet alleged that the decision was wrong. She has simply asked four questions. The lender cannot answer any of them from contemporaneous evidence. It must reconstruct. And every component of that reconstruction will be examined for the gap between what it claims and what the contemporaneous record, which does not exist, would have shown.
+
+The alibi does not require you to prove the decision was right. It requires only that you can show what you knew, who was accountable, and what was done, at that moment.
+
+The same scenario plays out in insurance underwriting, in employment screening, in procurement decisions, and in regulatory compliance determinations. The AI system is different. The regulatory framework is different. The claimant is different. But the four questions are the same. And the gap between the documentation that exists and the evidence that is required is identical.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Innocent but Unable to Prove It}
+
+The most important thing to understand about the Digital Alibi gap is that it is not a gap in the quality of decisions. It is a gap in the evidence of decision-making. An organisation whose AI systems consistently produce sound, fair, well-governed decisions may have an identical Digital Alibi gap to an organisation whose systems are poorly governed. The gap is a function of architecture, not of outcomes.
+
+In criminal law, an innocent defendant without an alibi faces a specific kind of jeopardy: they cannot establish their absence from the scene of the act, regardless of whether they committed it. The burden of proof nominally rests with the prosecution, but the absence of an alibi creates an evidential void that a skilled prosecution will exploit. In AI governance, the equivalent is an organisation that made sound decisions but cannot produce the contemporaneous evidence of its decision-making process. The burden in regulatory enforcement may rest with the regulator to establish a breach, but the absence of a Digital Alibi creates an evidential void that a skilled examiner, a hostile solicitor, or an aggressive shareholder will exploit.
+
+The Post Office Horizon scandal is the most instructive current example of this dynamic. The board's governance position, that Horizon was reliable, was not dishonest in its origins. It reflected a genuine institutional belief. But when the Horizon Inquiry began forensically reconstructing what information was available to the board at the moment of each decision to continue prosecuting sub-postmasters, the absence of a contemporaneous information picture meant that the gap between belief and evidence could not be closed. The internal reports flagging Horizon's known bugs existed. They simply were not captured in a form that established, at each specific decision moment, that the board had seen and weighed them. The evidential void did not prove the board was dishonest. It prevented them from proving they were not. For the sub-postmasters who were prosecuted, the distinction was irrelevant. For any board reading this chapter, it should be clarifying.
+
+Boards that have approved AI deployment in material decision processes are not, in most cases, doing so recklessly. They are approving what they believe are well-governed systems, managed by professional teams, with documented risk frameworks. The Digital Alibi gap does not make them bad governors. It makes them unable to prove they are good ones, at the moment the proof is required.
+
+That is the distinction this chapter has been building towards. The boards that will survive the AI governance reckoning of the next five years are not necessarily those with the most sophisticated AI systems, the most thorough risk frameworks, or the most experienced teams. They are the boards that can produce, for any material AI-assisted decision, the four elements of a Digital Alibi, contemporaneously captured, permanently retrievable, and forensically intact. Everything else, however well-intentioned and well-constructed, is documentation. The Digital Alibi is evidence. And in the moment that matters, only evidence counts.
+
+\textbf{THE TEST: COULD YOU PRODUCE THESE FOUR THINGS, FROM CONTEMPORANEOUS RECORDS, NOT RECONSTRUCTION, FOR YOUR LAST FIVE MATERIAL AI-ASSISTED DECISIONS?}
+
+\begin{itemize}
+\tightlist
+\item
+  The exact AI system and version that produced the output.
+\item
+  The complete information picture, including what the system could not see.
+\item
+  A human oversight record naming the reviewer, what they saw, and what authority they held.
+\item
+  The accountability chain, named and documented at the decision moment.
+\end{itemize}
+
+If the answer to any element is ``I would need to reconstruct it'', the reconstruction is the gap. A reconstruction is not a Digital Alibi.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{What the Law Requires of the Board That Does Not Have One}
+
+Chapter 2 has defined the Digital Alibi with the precision the rest of this book requires. The four elements are named. The temporal requirement is established. The distinction between documentation and defensibility is drawn.
+
+Chapter 3 addresses the question that follows: what does the existing legal and regulatory framework require of a board that cannot produce a Digital Alibi? The answer is not confined to the EU AI Act or the FCA's Senior Managers regime. It reaches into the foundational duties of company directors under English law, duties that predate artificial intelligence by more than a century and that apply to AI governance with a force that most boards have not yet reckoned with.
+
+The fiduciary standard that boards owe their shareholders does not exempt AI-assisted decisions from the duty of care. It does not accept ``the AI recommended it'' as a defence. It does not distinguish between decisions made by humans and decisions made with AI assistance. It asks one question: at the moment the board or its delegated representative made this decision, did they have the information they needed, and can they demonstrate that they did? The Digital Alibi is the architecture that makes that demonstration possible. Chapter 3 establishes why the absence of that architecture is not merely a governance gap. It is a fiduciary one.

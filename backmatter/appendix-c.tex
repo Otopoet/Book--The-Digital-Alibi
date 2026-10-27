@@ -1,0 +1,24 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter*{Appendix C: The Decision Reconstruction Template}
+\addcontentsline{toc}{chapter}{Appendix C: The Decision Reconstruction Template}
+\markboth{Appendix C: The Decision Reconstruction Template}{Appendix C: The Decision Reconstruction Template}
+
+The template below is the Decision Map entry structure described in Chapter 17, presented for immediate use as a board paper annex or as the specification for a technology-supported implementation. One entry per material AI-assisted decision, completed at the output moment. An entry assembled retrospectively from logs is a reconstruction, not a record, and should be marked as such.
+
+\textbf{Field 1. The Decision Record.} The specific decision made or materially influenced; the AI system, model version, parameters, and operational context; the date and time of the output moment. \emph{Guidance: this field anchors the other five. Without a fixed Decision Identity, no subsequent field has a reference point.}
+
+\textbf{Field 2. The Information Picture.} The data, context, and model state present and active at the output moment; what the system retrieved; what the decision-maker could access. \emph{Guidance: record what was live at the moment, not what the system usually uses or was trained on.}
+
+\textbf{Field 3. The Negative Space Record.} The structural absences: data the system was not given, context it was not designed to consider, inputs it was blind to, recorded as known absences at the time. \emph{Guidance: the negative space is where discrimination and negligence claims concentrate. Awareness of an absence cannot be reconstructed afterwards; it must exist as a record.}
+
+\textbf{Field 4. The Human Oversight Record.} Who reviewed the output; what they were shown and could not see; what override authority they held; what action they took or declined to take, and when.
+
+\textbf{Field 5. The Accountability Chain.} The named individual accountable for each governance function at the decision moment, from system owner to board oversight, as assigned at the time.
+
+\textbf{Field 6. The Retrievability Certification.} Confirmation that Fields 1 to 5 are captured, tamper-evident, and producible within the timeframe a regulatory or legal examination would require, with the retrieval route named.
+
+\begin{quote}
+\emph{Design test: each field should be captured automatically at the output moment. A field that requires manual assembly to complete an entry marks the design as incomplete.}
+\end{quote}

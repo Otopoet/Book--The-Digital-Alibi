@@ -1,0 +1,162 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter{The Alibi Record, What Governance at the Moment of Decision Looks Like}
+
+Every chapter in this book has been building towards one question: what does a governed AI decision actually produce as evidence? Not what governance structures exist in the organisation that made it. Not what policies were in place when it was made. Not what the board resolved to do about AI governance before it was made. What does the decision itself produce, at the moment it is made, in a form that survives forensic examination?
+
+Chapters 16 through 19 have described the board-level architecture required to make that question answerable: the Digital Alibi Assessment, the Decision Map, the compliance protocol, the board conversation. All of it, the confirmed governance address, the named accountability chains, the AI systems inventory, the 90-day Protocol, is the prerequisite structure. The Alibi Record is the lifeboat that structure was designed to build. It is what the architecture produces, at the granularity of every single material AI-assisted decision, continuously, from the moment of deployment forward. Without it, the governance architecture is a construction site. With it, the board has the only evidence that answers the output-moment question.
+
+The Alibi Record is the decision-level output of the Digital Alibi protocol. It is the contemporaneous, permanently retrievable record of the complete information picture at the moment a material AI-assisted decision is made. It is not a report generated after the fact. It is not a log assembled from components when a challenge arrives. It is not a governance document produced for a regulatory examination. It is created at the decision moment, in a form designed for forensic review, and it does not change after that moment. This is the distinction between documentation and defensibility that Chapter 2 established, operationalised at the granularity of every single governed decision.
+
+\begin{quote}
+\emph{Documentation describes intent. Defensibility requires evidence. The Alibi Record is the evidence, created at the decision moment, unchanged after it, retrievable on demand. It is the only record that answers the output-moment question because it is the only record created at the output moment. Everything assembled afterwards is reconstruction.}
+\end{quote}
+
+\scenebreak
+
+\section{What the Alibi Record Is Not}
+
+Three misconceptions about the Alibi Record are common enough to require direct address before the specification is given.
+
+The Alibi Record is not a model log. A model log captures what the AI system produced, its outputs, its inputs, its operational events. A model log is part of the evidence base from which an Alibi Record can be constructed if the governance architecture is designed correctly. But a log is not an Alibi Record. A log requires assembly and interpretation before it answers the output-moment question. An Alibi Record answers the output-moment question directly, because it was designed to do so at the moment of creation.
+
+The Alibi Record is not a compliance document. Compliance documents describe an organisation's governance arrangements, its policies, its frameworks, its audit trails, its certification status. They describe what the organisation intended to do. The Alibi Record describes what happened, at this decision, at this moment, with this information picture, under this accountability chain. Compliance documents are produced for regulatory review. The Alibi Record is produced at every decision moment whether a regulator will ever see it or not, because the governance standard requires it irrespective of external scrutiny.
+
+The Alibi Record is not a Decision Map entry. Chapter 17 described the Decision Map as a structured record with six fields, capturing the complete Digital Alibi for each material AI-assisted decision. The Decision Map is the governance architecture, the design of what will be captured and how. The Alibi Record is the output of that architecture for a specific decision. The Decision Map specifies the record. The Alibi Record is the record. An organisation that has built the Decision Map architecture but has not confirmed that it is producing complete Alibi Records for each governed decision has built the capture system without confirming that it is capturing.
+
+\scenebreak
+
+\section{What the Alibi Record Contains}
+
+The Alibi Record contains the four Digital Alibi elements, Decision Identity, The Information Picture, The Human Oversight Record, and The Accountability Chain, all captured at the decision moment, all present simultaneously in the same record. The simultaneity requirement from Chapter 11 applies at the record level: an Alibi Record that contains three of the four elements is not a partial Alibi Record. It is an incomplete one. A record with a gap in any element cannot answer the output-moment question for that element.
+
+\section{Decision Identity What decided and what it produced}
+
+Decision Identity in the Alibi Record captures four data points that must all be present at the output moment: the AI system that contributed to the decision, named and version-stamped as deployed at this specific moment; the operational context, what the system was configured to do and what it was not configured to consider at this version and parameter configuration; the output the system produced, in the exact form it was presented to the decision-maker including any confidence indicator or uncertainty measure; and the decision classification, whether the AI output was the primary basis for the decision, one input among several, or an output the human reviewer overrode and on what documented basis.
+
+The decision classification field is the one most commonly omitted from existing governance architectures and most directly relevant to the EU AI Act's human oversight requirements. If the Alibi Record cannot distinguish, for a specific decision, whether the AI output was followed automatically or overridden by a human reviewer, it cannot demonstrate genuine human oversight for either category. The classification must be present in the record at the output moment, not inferred from subsequent documentation or the absence of an override record.
+
+\section{The Information Picture What the system knew and what it could not see}
+
+The Information Picture in the Alibi Record captures the three-part test from Chapter 13: what was there, what was retrievable, and what was missing. All three dimensions must be present in a single record entry, not in separate logs, not in data architecture documentation, not in schema records that must be cross-referenced to establish what was absent.
+
+The positive record captures the data inputs presented to the model for this specific output, with source and vintage for each; the model state at the version deployed; the operational parameters active at the output moment; and the output produced including confidence indicators. The retrievable information picture captures what the human reviewer was actually shown and what supplementary information was accessible from their interface. The Negative Space Record captures data fields that were absent or null for this specific output, data sources structurally excluded from the model's information environment, and data whose vintage exceeded a freshness threshold at the output moment.
+
+The most operationally significant aspect of the Information Picture in the Alibi Record is the requirement that the Negative Space Record be captured as a positive record, a contemporaneous document of what was not there, rather than reconstructed from data architecture documentation. This is the requirement that most AI logging architectures do not currently meet. A logging architecture that captures the positive inputs and relies on schema documentation to establish the negative space has not produced an Alibi Record for the Information Picture element. It has produced half of one.
+
+\section{The Human Oversight Record Who saw what and what they did}
+
+The Human Oversight Record in the Alibi Record captures four elements at the decision moment: the reviewer's identity and the specific authority they held to override the AI output at that moment; the information they were actually shown, the form of the AI output as presented and what supplementary information was accessible; the time available for review and the decision volume being processed concurrently; and the disposition of the review, consistent with the AI output, inconsistent with it, or an override with a documented basis.
+
+The review duration and concurrent volume fields are the ones most directly relevant to the EU AI Act's Article 14 requirement that human oversight enables the detection and correction of failures. An Alibi Record showing a review duration of eight seconds for a decision processed alongside two hundred and ninety-nine others in the same hour does not demonstrate genuine oversight capacity. It is evidence of performative oversight, which Chapter 11 established is an aggravating factor, not a mitigating one, in any subsequent regulatory or legal examination of the decision.
+
+\section{The Accountability Chain Who was responsible and when it was confirmed}
+
+The Accountability Chain in the Alibi Record names three individuals current at the output moment: the model owner accountable for the system's design and performance at the version deployed; the decision process owner accountable for the governance process through which the output was incorporated into the decision; and the board-level risk acceptance authority who has accepted the risk this AI system represents, documented at the specific risk level rather than at the technology estate level.
+
+The currency requirement, that all three individuals are confirmed as current at the output moment from contemporaneous governance records, is the field that most commonly breaks under examination. An organisation whose accountability map is reviewed annually will have accurate records for eleven months of the year and potentially stale records for the month in which a departure, an interim appointment, or a role restructure affected the chain. The Alibi Record does not allow for that gap. The contemporaneous governance record, the HR records, the SM\&CR registration, the board minutes confirming the accountability acceptance, must exist and must confirm the named individuals as current at the specific output moment.
+
+\scenebreak
+
+\section{The Three Technical Standards the Alibi Record Must Meet}
+
+A governance record that can be modified after the decision moment is not an Alibi Record. It is a document. The difference is integrity. The Alibi Record must meet three technical standards to satisfy the Digital Alibi evidentiary requirement. These are not aspirational. They are the minimum the output-moment question demands.
+
+Contemporaneous. The Alibi Record must be generated at the decision moment, not reconstructed from it. A record assembled from logs after the challenge arrives is a reconstruction, it reflects what the logs contain at the time of assembly, not what the system contained at the moment of decision. Reconstruction is not contemporaneity. A record is contemporaneous only if it was created before the challenge, at the moment of the governed event, without reference to any subsequent information.
+
+Tamper-evident. Any modification to the Alibi Record after the output moment must be detectable. This is not a requirement that the record be immutable in the physical sense, technical corrections, format migrations, and storage transfers may be operationally necessary. It is a requirement that any such operation leaves a detectable trace that distinguishes the original record from any subsequent version. A record that can be modified without trace is a record whose integrity cannot be verified, and an integrity-unverifiable record does not satisfy the evidentiary standard, because the question ``is this what was captured at the decision moment?'' cannot be answered affirmatively from the record alone.
+
+Retrievable. The Alibi Record must be actively accessible within the timeframe a regulatory or legal examination requires, not merely archived. An archive satisfies the storage requirement. Retrievability satisfies the evidentiary requirement. A record that exists in an archive requiring three weeks of data engineering to surface is not retrievable within the timeframe most regulatory examinations allow. The Retrievability Certification from Chapter 17 is the governance mechanism that confirms the Alibi Record meets this standard before a challenge arrives.
+
+\begin{quote}
+\emph{A governance record that can be modified without trace is not an Alibi Record. A record that requires three weeks of data engineering to surface is not retrievable. A record assembled from logs after the challenge arrives is not contemporaneous. The evidentiary standard requires all three technical conditions simultaneously. Two out of three is a gap.}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{THE THREE FAILURE MODES, HOW EACH STANDARD IS BREACHED IN PRACTICE}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Contemporaneity failure: the organisation's compliance team assembles the decision record from system logs after the FCA information request arrives. Each log entry is accurate. The assembled record is not contemporaneous, it was created after the challenge, by reference to current system states that may not reflect the system's state at the decision moment. A court asked whether this record represents what existed at the decision moment cannot be given an affirmative answer from the record itself. It is a reconstruction, not an Alibi Record. \\
+Tamper-evidence failure: the Alibi Record is stored in a database whose access controls permit write operations by members of the governance team. No modification has been made. But the record's integrity cannot be independently verified because the storage architecture does not maintain a tamper-evident audit trail of its own. The regulator asks whether the record has been modified since the output moment. The honest answer is: we cannot demonstrate that it has not been. That answer does not satisfy the evidentiary standard. \\
+Retrievability failure: the Alibi Record exists in a compliant archive. The index that would allow a specific decision's record to be located within that archive was maintained by a member of the data engineering team who left the organisation eight months ago. Locating and producing the record for a specific decision requires three weeks of data recovery work. The regulator's standard information request window is five working days. The record cannot be produced within the required timeframe. Archive status is not retrievability. The record is irrecoverable for governance purposes even though it exists. \\
+\end{longtable}
+
+\scenebreak
+
+\section{What the Alibi Record Satisfies, the Regulatory Alignment}
+
+The Alibi Record, fully implemented, addresses the specific evidentiary requirements of six regulatory instruments simultaneously. The table below maps each instrument to the specific element of the Alibi Record that addresses it. The purpose of this mapping is not to demonstrate that the Alibi Record is a compliance tool, it is not, and framing it as one understates its significance. The purpose is to show that a single governance architecture, built to the Digital Alibi evidentiary standard, satisfies obligations that most organisations are currently addressing through six separate compliance programmes, none of which is producing the output-moment evidence the instruments ultimately require.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1692}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8308}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Regulatory instrument}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{How the Alibi Record addresses it}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{EU AI Act Art. 12, Record keeping} & Contemporaneous, tamper-evident record at the decision level, not only at the system level. The Alibi Record satisfies Article 12 for each specific high-risk AI decision, not just for the system as a whole. \\
+\textbf{EU AI Act Art. 13, Transparency} & The Information Picture and Decision Identity provide the transparency documentation required for high-risk AI deployment, attached to each specific decision rather than described at policy level only. \\
+\textbf{EU AI Act Art. 14, Human oversight} & The Human Oversight Record documents oversight at the moment of each decision, not a policy commitment to oversight, but evidence of oversight capacity exercised at the specific output moment. \\
+\textbf{EU AI Act Art. 19, Conformity assessment} & The accumulated Alibi Records across material decisions provide the decision-level documentation basis for conformity assessment. Conformity is not a point-in-time certification, it is evidenced decision by decision. \\
+\textbf{DORA, ICT risk management} & Decision-level operational resilience evidence supports DORA's requirement for documented ICT risk management across the active decision pipeline of each governed AI system. \\
+\textbf{FCA SM\&CR, Named accountability} & The Accountability Chain in each record satisfies the SM\&CR requirement for a named Senior Manager accountable for each material AI-assisted decision, named in the record, current at the decision moment. \\
+\end{longtable}
+
+The cases in Part Two make the regulatory alignment concrete in a single observation. The Boeing 737 MAX MCAS certification failure produced no Alibi Record at the certification decision moment, the information about MCAS's full authority existed in Boeing's documentation but was not present as a reconstructible information picture at the moment the certifying engineers signed off. The Post Office Horizon prosecutions were sustained for two decades because no Alibi Record existed for the decisions to prosecute: the system's output was treated as the information picture, and no contemporaneous record captured what the system could not see, who reviewed its outputs and in what capacity, or who was accountable at the decision moment for each specific prosecution decision. An Alibi Record would not have prevented either failure. It would have made the information picture at each decision moment irrecoverable by neither institutional momentum nor convenient silence, which is precisely what a forensic evidentiary standard is designed to produce.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{THE DIRECTOR'S FINAL CHECKLIST, FOUR QUESTIONS BEFORE ANY MATERIAL AI DEPLOYMENT}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Is a complete Alibi Record, all four elements, all three technical standards, generated automatically at the output moment, in place for this AI system before the first live decision is made? If the answer is no, the deployment is proceeding without a Digital Alibi architecture. Every decision made before the architecture is operational is a decision whose information picture will not survive the output-moment question. \\
+2. Has the Retrievability Certification been issued for this system by an independent examiner, confirming that a complete Alibi Record for a live decision can be produced within five working days from the contemporaneous record alone? If the certification has not been issued, the retrievability standard has not been confirmed. \\
+3. Is the Accountability Chain for this system current at the output-moment level, confirmed from contemporaneous governance records at the version deployed today, not from an annual accountability review? If the chain was last confirmed before any relevant departure, interim appointment, or role restructure, it may not be current at the deployment moment. \\
+4. Does the board minute approving this deployment name the board-level risk acceptance authority for this specific system, not for AI governance generally, but for this system at this version? If the minute records a governance programme rather than a named individual accepting a specific accountability, the board has noted the deployment. It has not governed it. \\
+\end{longtable}
+
+\section{The Minimum Governance Address Required to Implement the Alibi Record}
+
+The Alibi Record architecture requires a confirmed governance address of at least A3·E3·C3·R3·M3 to implement at full operational effect. Below this address on any facet, the prerequisites are structurally absent, and the Alibi Record cannot be generated in the form the evidentiary standard requires.
+
+At E2 or below: production AI systems have not been fully identified. You cannot generate a Decision Identity record for a system you do not know you have. The inventory exercise from Days 1-15 of the 90-day Protocol is the prerequisite for E3, and E3 is the floor below which Alibi Record generation cannot begin for the systems that remain undiscovered.
+
+At C1: governance exists on paper only. There is no operational mechanism to capture the Human Oversight Record at the decision moment. A governance architecture that exists only in policy documents does not produce the contemporaneous capture the Alibi Record requires. The technical implementation from Days 51-70 of the Protocol is the C facet investment that creates the capture mechanism.
+
+At A1: there is no named ownership at any level. The Accountability Chain field of the Alibi Record cannot be meaningfully populated. Named individual accountability at board level, A4, is required for a complete Alibi Record. A3 is the minimum at which the chain exists in operational form; A4 is required for the chain to be documented at board level with the specificity the EU AI Act and SM\&CR require.
+
+The governance protocol that Chapters 16 through 19 describe is the prerequisite architecture. The Governance Classification Briefing produces the confirmed starting address. The Digital Alibi Assessment confirms the gap between that address and the sector ceiling. The 90-day Protocol advances the address to the level at which Alibi Record generation becomes operationally possible. The board conversation in Chapter 19 secures the named accountability acceptances that advance the address from A3 to A4. The Alibi Record is what becomes possible once all of that is in place.
+
+\scenebreak
+
+\section{What This Means for the Board}
+
+A board that has completed the Protocol described in Part Four, that has conducted the Digital Alibi Assessment, built the Decision Map, met the 2 August 2026 deadline requirements, had the board conversation, and now has an operational Alibi Record architecture generating contemporaneous tamper-evident retrievable records for every material AI-assisted decision, has achieved something no governance framework or compliance programme alone delivers.
+
+It has ensured that the complete information picture at every material AI decision moment is captured, verified, and permanently retrievable. That the accountability chain from system to board is named and current in the record at every decision moment. That the human oversight exercised at each decision is documented in a form that distinguishes genuine from performative. And that all of this is available on demand, from the contemporaneous record, without manual reconstruction, within the timeframe a regulatory or legal examination requires.
+
+That is not a compliance claim. It is an evidentiary claim. And it is the only claim that survives the question a regulator, a litigant, or a shareholder will actually ask: not ``do you have AI governance?'', every organisation has AI governance, but ``can you show me exactly what your AI knew, and who was accountable, at the moment this specific decision was made?''
+
+The board that can answer yes has a Digital Alibi. The board that cannot answer yes has documentation. The gap between those two positions is the gap this book was written to close.
+
+\begin{quote}
+\emph{Evidence is not control. But without contemporaneous evidence, there is no control to demonstrate. The Alibi Record is the evidence. It is not a compliance artefact. It is the only record that answers the question a regulator or court will actually ask, because it is the only record created at the moment the question applies to.}
+\end{quote}

@@ -1,0 +1,182 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\part{The Problem That Has No Name Yet}
+
+\chapter{The Question No Board Can Answer}
+
+The room is unremarkable. A conference table. Water glasses. A regulator's representative, courteous and unhurried, with a single sheet of paper in front of him. The board has prepared for this meeting for six weeks. They have briefed their legal counsel, reviewed their governance documentation, and assembled every policy document the organisation has produced on artificial intelligence in the past three years.
+
+The question, when it comes, is brief.
+
+``Can you show me the complete information picture available to your board at the moment this AI system produced the output that led to this decision?''
+
+The board cannot answer.
+
+Not because wrongdoing occurred. The decision itself was reasonable. The AI system was procured from a reputable vendor. The governance policies were thorough and had been independently reviewed. The board had received regular briefings on AI risk. By every conventional measure of corporate governance, this organisation had done what was expected of it.
+
+But the question was not about process. It was about evidence. At the moment this specific AI-assisted decision was made, not the policy that governed AI decisions in general, not the documentation produced in the months before or after, but the exact moment the system produced its output and a human being acted upon it, what information existed, who held it, who reviewed it, who was accountable for it, and is any of it retrievable today in a form that would satisfy the examiner across the table?
+
+The honest answer, arrived at after six weeks of preparation and three hours of increasingly uncomfortable internal review, is that nobody knows. The information existed somewhere. Parts of it still exist, in logs, in emails, in model documentation scattered across multiple systems. But the information picture, the coherent, contemporaneous, forensically intact account of what was known and by whom at the exact moment of the decision, was never captured. And what was never captured cannot now be reconstructed.
+
+The six weeks of preparation have produced nothing that can answer the question. The governance infrastructure was built to describe intent. The question asks for evidence.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+The Gap Nobody Named
+
+I have spent twenty-five years inside the rooms where consequential decisions are made. As Chief Technology Officer, Chief Operating Officer, and interim Chief Data Officer across insurance, aviation, and financial services, I have sat at boards and executive committees that approved technology investments, signed off system deployments, and accepted risk assessments on the basis of outputs from models and algorithms. I know what it looks like when an organisation believes it has governance.
+
+It looks like the board in that conference room.
+
+The failure was not negligence. It was structural. The organisation had built governance for the question it expected to be asked, ``do you have policies in place?'', and had not built governance for the question that actually arrives when something goes wrong: ``what did you know, at this specific moment, and what did you do with it?''
+
+These are not the same question. The first is a process question. The second is an evidentiary question. Every AI governance framework produced in the last five years, and I have read them all, answers the first question with rigour and leaves the second question entirely unaddressed.
+
+This book is about the second question. It has a name. I call it the Digital Alibi problem.
+
+An alibi is not a defence. An alibi is evidence of your position at the moment a specific event occurred.
+
+The Digital Alibi is evidence of a board's information position at the moment a specific AI-assisted decision was made. It requires four things to be present simultaneously, at the decision moment, in a form that survives forensic examination.
+
+\textbf{THE FOUR ELEMENTS OF A DIGITAL ALIBI}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Decision Identity, which AI system, at which version, produced which output in which operational context.
+\item
+  The Information Picture, the complete data, model state, and parameters that existed at the decision moment, including what the system could not see.
+\item
+  The Human Oversight Record, who reviewed the AI output, what they were shown, what authority they held to override, and what they decided.
+\item
+  The Accountability Chain, named individual accountability from the AI system to the board, documented at the time of the decision, not assigned retrospectively.
+\end{enumerate}
+
+Four things. Most organisations currently have none of them captured at the moment they are needed. The information may exist in fragments across the organisation's systems. But fragments assembled after the fact are not a Digital Alibi. They are reconstruction. And reconstruction, as regulators and courts have learned to recognise, is a fundamentally different kind of evidence.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Why Reconstruction Is Not Enough}
+
+The distinction between contemporaneous evidence and retrospective reconstruction is not a technical nicety. It is the difference between a fact and an argument.
+
+When an organisation attempts to piece together the information picture behind an AI-assisted decision after the fact, assembling emails, querying logs, asking the model vendor for version histories, it is not producing evidence. It is producing a narrative. And a regulator or court examining that narrative faces an unavoidable question: how much of this account was true at the moment of the decision, and how much of it has been shaped, consciously or not, by knowledge of the outcome?
+
+This is what regulators call reverse-engineering. In a crisis, an organisation attempting to reconstruct what happened from scattered records looks, to an experienced examiner, like it is manufacturing a justification rather than proving a fact. The legal term is ``post-hoc rationalisation,'' and it carries a presumption that is deeply unfavourable to the party producing it. It does not matter whether the original decision was sound. If the evidence of its soundness was not captured at the moment it was made, the reconstruction of that evidence will always be suspect.
+
+Medicine understood this sixty years ago. The legal standard established in Bolam v Friern Hospital Management Committee in 1957, that a doctor's conduct is assessed by reference to what a responsible body of medical opinion would have done at the time of the decision, produced, as its operational consequence, the contemporaneous clinical record. Clinicians do not document what they did after the outcome is known. They document what they knew, what they considered, and what they decided at the moment of the clinical decision. The contemporaneous note is not a bureaucratic habit. It is a legal safeguard. Its absence, in a clinical negligence case, is not neutral, it is an aggravating factor.
+
+For AI-assisted decisions, the equivalent infrastructure does not yet exist in most organisations. The information picture at the decision moment is not captured as it is created. It is assumed to be recoverable from logs and system records if it is ever needed. That assumption is the Digital Alibi gap. In clinical terms, it is the equivalent of expecting to reconstruct a patient's consultation from the GP's memory, the pharmacy's dispensing record, and a search of the patient's email. The information may exist. It is not evidence.
+
+If the data was not captured at the decision moment, it is, in any evidentiary sense that matters, thin air.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Personal Stakes: What the FCA's SM\&CR Actually Requires}
+
+The Financial Conduct Authority's Senior Managers and Certification Regime is the most directly relevant regulatory instrument for UK boards grappling with AI governance. Most boards are aware of it in broad terms. Fewer understand the specific provision that makes the Digital Alibi gap a matter of personal liability for every Senior Manager whose name appears on an accountability map.
+
+The Duty of Responsibility, set out in section 66A of the Financial Services and Markets Act 2000, requires that when a firm breaches a regulatory requirement, a Senior Manager responsible for the area of the breach may be held personally accountable, unless they can demonstrate that they took ``such steps as a person in their position could reasonably be expected to take'' to avoid the breach occurring. This is not a standard of perfection. It is a standard of evidence.
+
+The critical word is ``demonstrate.'' The SM\&CR does not ask whether a Senior Manager intended to meet their obligations. It asks whether they can prove, with evidence, that they took reasonable steps. In an AI governance context, the reasonable steps a Senior Manager should take include understanding which AI systems they are responsible for, ensuring those systems are operated within a documented governance framework, and maintaining oversight of the decisions those systems contribute to. Without a Digital Alibi architecture, none of those steps can be demonstrated. The records that would prove reasonable oversight were never created.
+
+This reversal of the evidential burden is the aspect of SM\&CR that boards most consistently underestimate. It is not sufficient for a Senior Manager to believe they acted reasonably. It is not sufficient for their colleagues to attest that they did. The FCA requires evidence of reasonable steps, contemporaneous, specific, and tied to the decisions in question. A policy document, however thorough, is evidence of intent. A governance framework, however sophisticated, is evidence of design. Neither is evidence of what actually happened at the moment a specific AI-assisted decision was made. Only the Digital Alibi provides that. And in its absence, the personal exposure of every named Senior Manager is not a theoretical risk. It is a standing liability.
+
+Without a Digital Alibi, a Senior Manager cannot demonstrate the reasonable steps the FCA requires. The governance gap is not the organisation's problem alone. It is a personal career and financial liability for every named individual on the accountability map.
+
+The Black Box: How Aviation Solved This Problem in 1958
+
+On 30 June 1956, two commercial aircraft collided above the Grand Canyon. One hundred and twenty-eight people died. The Civil Aeronautics Board investigation was forensically compromised from the outset, not because the physical evidence was inadequate, but because there was no record of what the pilots knew, what they saw on their instruments, or what decisions they made in the minutes before impact. The investigators could reconstruct the wreckage. They could not reconstruct the information picture.
+
+The United States Congress responded in 1958 with the Federal Aviation Act. Among its requirements was the mandated installation of Flight Data Recorders on commercial aircraft. What is now universally known as the black box was, in governance terms, a revolutionary concept: a device whose sole purpose was to capture the complete information picture at the moment of consequential decisions and preserve it in a form that would survive the event it documented.
+
+The Flight Data Recorder does not prevent accidents. It does not improve pilot decision-making in real time. It does not add anything to the safety of a flight in progress. Its entire purpose is evidentiary. When something goes wrong, the information picture that existed at the moment of each critical decision, the altitude, the speed, the control inputs, the instrument readings, is available for forensic examination in exactly the state it was in at the moment it was created. It cannot be reconstructed from memory. It cannot be assembled from scattered records. It exists because Congress mandated that it must exist, at the decision moment, permanently, because the alternative, investigating consequential failures without contemporaneous evidence, had proven to be an inadequate basis for justice, accountability, or safety improvement.
+
+The cultural significance of that mandate is as important as its technical content. Before 1958, aviation governance operated on the assumption that professional competence and procedural compliance were adequate substitutes for contemporaneous evidence. After 1958, the entire industry accepted that they were not. The black box was not a statement of distrust in pilots. It was an acknowledgement that the decisions made inside a cockpit at thirty thousand feet are consequential enough to require a contemporaneous record, and that no amount of policy, training, or professional standards can substitute for that record when a challenge arrives.
+
+Most boards deploying AI in material decision processes have not yet had their 1958 moment. They have the equivalent of pre-mandate aviation governance: professional teams, documented procedures, risk assessments, and no black box. The question this book addresses is whether they build the equivalent architecture before the incident that mandates it, or after.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Post Office: A Digital Alibi Failure in Public}
+
+There is no more instructive current illustration of what the Digital Alibi gap produces than the Post Office Horizon IT scandal. It is instructive not because it was an AI governance failure in the contemporary sense, Horizon was not an artificial intelligence system, but because its forensic anatomy is identical to the failure this book describes. A board was told that a system was reliable. The information picture available to that board at the moment of each decision to continue prosecuting innocent sub-postmasters was either incomplete, withheld, or not captured in a form that could subsequently be examined. And the public inquiry led by Sir Wyn Williams is now doing, in the full light of public scrutiny, precisely what the Digital Alibi protocol is designed to prevent: attempting to reconstruct what the board knew, at the moment of each decision, from whatever fragments survived.
+
+The Post Office's position, maintained for years, was that Horizon was robust and that discrepancies in sub-postmasters' accounts reflected genuine financial shortfalls for which those individuals were responsible. That position was a policy position. It described the board's belief about the system's reliability. What the Horizon Inquiry has progressively established is that the information picture, the actual evidence of Horizon's reliability or otherwise, available at the moment of each prosecutorial decision, was materially different from the board's stated belief. Internal reports flagging known bugs existed. Second legal opinions questioning the reliability of Horizon evidence existed. That information existed somewhere in the organisation. The board's governance architecture was not built to ensure it was captured, surfaced, and recorded at the decision moment.
+
+The legal consequence, now unfolding across hundreds of cases, is precisely what this book predicts: without a contemporaneous record of what the board actually knew at each decision point, the reconstruction of its knowledge and intent is being performed by an external inquiry, under oath, with adversarial counsel, and with the presumption that the absence of records is itself a finding. The paper trail, the policy documents, the board minutes, the legal opinions that did reach the board, is being weighed against the emerging forensic reality of what was known and not disclosed. That gap, between the documented governance position and the actual information picture, is the Digital Alibi failure in its most consequential form.
+
+For every NED reading this chapter, the Post Office inquiry is not a historical curiosity about an unusual technology failure. It is a preview of what any public or regulatory examination of AI governance will look like when it arrives, because AI systems are more opaque than Horizon, more consequential in their scale, and more difficult to audit retrospectively. The question Sir Wyn Williams is asking of Post Office executives, what did you know, and when did you act on it, is the same question the FCA, the ICO, and the EU AI Office will ask of boards that have deployed AI in material decisions. The boards that have built the Digital Alibi architecture will be able to answer. The boards that have not will face what the Post Office now faces.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Five Questions. One Test.}
+
+Your organisation has approved AI deployment in one or more material decision processes in the last twenty-four months. Name the five most consequential AI-assisted decisions made by your organisation in that period. They may be in credit, underwriting, hiring, procurement, or regulatory compliance. They exist. Now apply the following test.
+
+Question One: Can you name the version?
+
+For each of those five decisions: can you identify the AI system that contributed to it, at the precise version it was running at the moment the decision was made?
+
+If you cannot, you cannot prove you were not using a model with known defects, unpatched vulnerabilities, or behaviour that had drifted from its original specification. Under EU AI Act Article 9, operators of high-risk AI systems are required to maintain technical documentation that includes the version of the AI system deployed. Without version-level traceability at the decision moment, that documentation requirement is unmet, not in principle, but in practice, for each specific decision the regulator or court examines. If a claimant alleges that the model used to assess their credit application or employment suitability was operating with a known bias, and you cannot produce the version deployed at the moment of their specific decision, you cannot rebut the allegation with evidence. You can only argue against it.
+
+Question Two: Can you produce the information picture?
+
+For each of those five decisions: can you produce the complete information picture that existed at the exact moment the system produced its output, including what the system could not see?
+
+The second half of this question is as important as the first. What the AI system could not see, the data it was not given, the context it was not designed to consider, the inputs it was structurally blind to, is frequently the basis of discrimination and bias claims. A credit scoring model that was not given certain protected characteristic data may nonetheless have produced outputs that correlate with those characteristics through proxy variables. If the information picture at the decision moment does not record what the system could not see, the organisation cannot demonstrate that it was aware of, and had assessed, those proxy risks at the time of the decision. The absence of that record does not prove discrimination. But it removes the evidence that would disprove it.
+
+Question Three: Is there a contemporaneous oversight record?
+
+For each of those five decisions: can you show, with a record created at the time rather than reconstructed from memory, who reviewed the AI output, what they were shown, what authority they held to override the system's recommendation, and what they decided to do?
+
+Performative oversight, a human sign-off that occurs in name but without genuine review capability, is not a Digital Alibi element. It is an aggravating factor. A governance process in which AI outputs are routed through a human reviewer who has neither the time, the information, nor the authority to override them does not satisfy the EU AI Act's Article 14 human oversight requirement. And if that process is documented only at the policy level, ``a human reviews all AI outputs before a decision is taken'', without a decision-level record of each review, the policy description cannot be distinguished from the governance reality. Regulators have learned, from financial services and pharmaceutical enforcement, that the gap between policy and practice is precisely where liability concentrates.
+
+Question Four: Is the accountability chain documented, from that moment?
+
+For each of those five decisions: can you name the individual accountable for it at board level, as documented at the time of the decision rather than assigned after the fact?
+
+Under the FCA's SM\&CR Duty of Responsibility, retrospective assignment of accountability is not accountability. If the name of the responsible Senior Manager was not on the governance document at the time the decision was made, any subsequent identification of that individual looks, to an experienced regulator, like scapegoating rather than governance. The distinction matters for the individual, whose personal exposure depends on whether their accountability was documented contemporaneously, and for the organisation, whose governance position depends on whether its accountability chains are real or nominal. Ownership without contemporaneous documentation is not governance. It is a placeholder.
+
+\textbf{IF YOU ANSWERED ``NO'' TO ANY OF THESE FOUR QUESTIONS}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Question
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Consequence
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Question 1, Version unknown & You cannot rebut claims of defective or biased model behaviour with evidence. \\
+Question 2, Information picture incomplete & You cannot demonstrate awareness of proxy risk at the decision moment. \\
+Question 3, No contemporaneous oversight record & Your governance policy cannot be distinguished from your governance practice. \\
+Question 4, Accountability assigned retrospectively & Your accountability chain does not satisfy the FCA SM\&CR Duty of Responsibility. \\
+\end{longtable}
+
+Any single ``no'' is a Digital Alibi gap. A gap that a regulator, a court, or a shareholder's counsel will find, because these are the questions they are trained to ask.
+
+Compliance passes the audit. Control survives the incident. The boards that survive the AI governance reckoning will be those that built the alibi before they needed it.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{What This Book Is, and Is Not}
+
+This book is not a technical manual. It does not explain how AI systems work, how models are trained, or how algorithms produce their outputs. There are excellent books on those subjects. This is not one of them.
+
+This book is not a compliance guide. It will reference the EU AI Act, the FCA's Senior Managers and Certification Regime, the UK Corporate Governance Code, and other regulatory frameworks throughout, but its argument is not ``here is how to comply with the regulation.'' Its argument is that compliance with the existing regulatory frameworks, taken together, does not close the Digital Alibi gap. A board that has achieved full compliance with every named standard, passed every audit, and received a clean bill of governance health from its advisers may still be entirely unable to answer the question that was asked in the conference room at the start of this chapter.
+
+This book is about an evidentiary standard. It defines that standard, names the gap between where most boards currently sit and where the standard requires them to be, and provides the governance architecture for closing it before the question arrives.
+
+The argument is derived from twenty-five years of executive decision-making across industries that have already had their AI governance reckoning. Aviation had it in 1956. Financial services had it in 2008. The pharmaceutical industry had it in 1961. The Post Office is having it now, in public, in a manner that no NED in the United Kingdom can claim not to have seen. Each of those industries built, in response to its reckoning, a governance architecture that captured the information picture at the moment of consequential decisions. That architecture now looks obvious. It was not obvious before the reckoning arrived.
+
+The only question for the board reading this chapter is whether they build it before their reckoning, or after.
+
+Chapter 2 defines the Digital Alibi standard with the precision that ``building it'' requires. It names the four elements, specifies the technical standard each must meet, and draws the line between the governance that currently exists in most organisations and the governance that would satisfy the question asked in that conference room. If Chapter 1 has established the threat, Chapter 2 provides the map. The reader who finishes this book will know exactly what the alibi looks like, exactly how far their organisation currently is from having one, and exactly what must be done before the question arrives in a form they cannot defer.

@@ -1,0 +1,195 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter{Why Existing AI Governance Frameworks Miss the Point}
+
+Consider the most governance-sophisticated board in this book's readership. It has implemented ISO 42001, the AI management system standard, and has the certification to prove it. It has a Senior Managers and Certification Regime accountability map, with named individuals documented against every material AI system. It has completed an EU AI Act gap analysis, run by a leading advisory firm, and its high-risk AI systems met the 2 August 2026 compliance deadline. It has adopted the OECD AI Principles, published an AI ethics statement, and its CTO presents a quarterly AI governance report to the board.
+
+Now picture the moment the question arrives. The regulator's representative is unhurried and precise. She asks it once. The boardroom is quiet in the way boardrooms go quiet when a question has landed that nobody knows how to answer. The Chief Risk Officer looks at the CTO. The CTO looks at the governance documentation on the table. The general counsel opens a folder. Six seconds of silence. Ten. The Chief Executive speaks, not to answer the question, but to ask for clarification that is not needed. Everyone in the room knows the answer. It is no.
+
+This board, by every conventional standard of AI governance, has done the work. If a governance audit were conducted tomorrow, it would receive a strong assessment. Its documentation is thorough, its frameworks are current, its advisory firm is reputable.
+
+It still cannot answer the question.
+
+The regulator's question, ``can you show me the complete information picture at the moment this specific AI system produced this specific output that contributed to this specific decision?'', is not answered by any of the frameworks this board has implemented. Not because the frameworks are inadequate at what they were designed to do. But because none of them were designed to answer it.
+
+This is the argument of Chapter 4, and it is the argument that closes Part One of this book. Chapters 1 through 3 established what the Digital Alibi gap is, why it creates fiduciary liability, and what the legal architecture of that liability looks like. This chapter explains why the existing governance canon, the serious, rigorous, well-intentioned body of work that AI governance practitioners have built over the past decade, leaves the gap intact. Not from negligence. From design.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+What Frameworks Are Designed to Do
+
+Every AI governance framework is an answer to a question. The relevant question is always some version of: how should an organisation structure its approach to AI? The frameworks differ in scope, specificity, and enforcement weight, but their orientation is the same. They are supply-side instruments. They describe what governance structures, policies, processes, and oversight mechanisms should be in place. They are designed to tell an organisation what to build.
+
+This is valuable work. An organisation without any of these frameworks is in a materially worse governance position than one that has implemented several. The frameworks have driven genuine improvements in AI risk management, accountability, and transparency across the industries that have adopted them. They deserve to be taken seriously, and they are, by the organisations and advisers who work with them daily.
+
+The Digital Alibi gap is not an argument against these frameworks. It is an observation about the question they were not designed to answer. The question they answer is: do you have the right structures? The question the Digital Alibi addresses is: can you prove those structures operated, for this specific decision, at this specific moment? The first is a governance design question. The second is an evidentiary question. They are different questions. The frameworks answer the first. None of them answer the second.
+
+Process governance asks: do we have the right structures? Evidentiary governance asks: can we prove they operated, for this decision, at this moment? These are different questions. The existing canon answers only the first.
+
+This distinction, supply side versus demand side, is the organising principle of this chapter. The supply side of governance asks what should be built. The demand side asks what evidence must survive when what was built is tested by a challenge. Every framework examined in this chapter addresses the supply side with rigour. None of them address the demand side at the level of the individual output moment. The gap between what they produce and what a regulator's question, a shareholder's challenge, or a court's inquiry requires is the Digital Alibi gap.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Five Frameworks, One Gap
+
+The following survey is not exhaustive. There are dozens of AI governance frameworks, codes of practice, and guidance documents in circulation. The five examined here are the most widely adopted, the most frequently cited in board governance conversations, and the most directly relevant to the organisations this book addresses. Each is examined on its own terms, what it requires, what it produces, and where it stops.
+
+ISO 42001:2023 AI Management System Standard
+
+ISO 42001 is the first internationally recognised management system standard specifically designed for AI. Published in December 2023, it applies to organisations that develop, provide, or use AI systems and establishes a framework for responsible AI management across the organisation's AI lifecycle. It requires organisations to establish a documented AI policy, define roles and responsibilities, conduct AI impact assessments, implement controls for identified risks, and maintain records of AI management activities. It is certifiable by accredited third-party auditors and carries the institutional weight of the ISO standards family.
+
+ISO 42001 addresses the supply side of AI governance with considerable rigour. Its requirements for AI impact assessments, risk management, and documented controls push organisations towards systematic thinking about their AI systems. Its emphasis on roles and responsibilities creates accountability structures that improve on the informal arrangements many organisations have previously relied on.
+
+It does not address the output moment. ISO 42001's record-keeping requirements relate to the management system, the policies, the impact assessments, the risk register, the control documentation. They do not require a contemporaneous record of the information picture for each specific AI output. An organisation certified to ISO 42001 has demonstrated that its AI management system meets the standard's requirements. It has not demonstrated, and the standard does not require it to demonstrate, that any specific AI-assisted decision was made with adequate information captured at the output moment.
+
+OECD AI Principles 2019, Voluntary
+
+The OECD AI Principles, adopted in 2019 and updated in 2024, established the first intergovernmental standard on AI governance. They identify five principles for responsible AI stewardship: inclusive growth and sustainable development; human-centred values and fairness; transparency and explainability; robustness, security and safety; and accountability. Adopted by over 40 countries, they have shaped subsequent national and international AI governance instruments and remain the most widely referenced voluntary AI governance framework globally.
+
+The Principles operate at the highest level of abstraction. They describe values and aspirations rather than operational requirements. The accountability principle, for example, states that AI actors should be accountable for the proper functioning of AI systems and for the respect of the above principles. This is an important normative commitment. It does not specify what accountability looks like at the output moment for a specific credit decision, what information must be captured to demonstrate that accountability, or how that demonstration would survive regulatory scrutiny.
+
+An organisation that has adopted the OECD AI Principles has made a statement about its values and intentions. It has not built a Digital Alibi. The Principles are a commitment to govern well. They are not evidence that any specific decision was governed at all.
+
+PRA Model Risk Management Guidance Supervisory Statement SS1/23, May 2023
+
+The PRA's Supervisory Statement SS1/23 on Model Risk Management is the most sector-specific and operationally detailed framework examined here. Published in May 2023 and applicable to UK banks, building societies, and PRA-designated investment firms, it establishes a comprehensive framework for managing model risk, the risk of adverse consequences from decisions based on models. Its three pillars, model development and implementation, model use, and model validation, create structured requirements for how firms identify, assess, and control the risks arising from their use of models, including AI systems.
+
+SS1/23 is genuinely demanding. Its requirements for model validation, including the requirement for independent validation of high-risk models by teams separate from the model development function, represent a significant governance investment. Its emphasis on model inventory, risk tiering, and ongoing monitoring has materially improved risk management in the firms to which it applies.
+
+It addresses model-level governance, not decision-level evidence. SS1/23 requires firms to demonstrate that their model risk management framework is sound, that their models are appropriately validated, and that their use of models is subject to adequate oversight. It does not require firms to demonstrate, for a specific decision made on the basis of a specific model output on a specific date, what information picture existed at the output moment. A firm that fully complies with SS1/23 may still be unable to answer the question that a regulatory examination of a specific AI-assisted decision will ask. The framework governs the system. The question is about the moment.
+
+EU AI Act Regulation (EU) 2024/1689, High-Risk Systems, Title III
+
+The EU AI Act is the most significant AI governance instrument yet enacted. Its application to high-risk AI systems, including AI used in credit decisions, employment, access to education, law enforcement, and border management, creates enforceable obligations backed by penalties of up to €15 million or 3\% of global annual turnover. Chapter 3 examined the specific articles most directly relevant to fiduciary duty. The key point for this chapter is structural rather than specific.
+
+Article 12 of the Act, the record-keeping obligation, deserves particular attention here because it is the provision most frequently cited as the EU AI Act's equivalent of a Digital Alibi requirement. Article 12 requires operators of high-risk AI systems to ensure that their systems are capable of automatically logging events relevant to the identification of risks and to situations in which the system may not function as intended. Logs must be retained for a period appropriate to the system's intended purpose.
+
+This sounds like the output-moment capture the Digital Alibi requires. It is not, and the distinction is precise. Article 12 requires that the system be capable of logging events, meaning the logging capability must be designed in. It does not specify that logs must capture the complete information picture for each individual output. ``Events relevant to the identification of risks'' is a system-health framing: the regulation is concerned with identifying when the system is malfunctioning, not with preserving the evidence base of each decision the system contributes to. A system that logs error states, anomalous outputs, and performance degradation satisfies Article 12. It does not produce a Digital Alibi for the decisions made between those anomalous events, the decisions made when the system was performing as designed, which is precisely when the output-moment question will be asked.
+
+The EU AI Act's Article 12 creates the logging infrastructure. The Digital Alibi requires that infrastructure to operate at the resolution of the individual output moment, capturing the complete information picture, including what the system was not given, for every material decision. Article 12 does not require this. An operator in full compliance with Article 12 may still be entirely unable to produce the Decision Identity, the Information Picture, or the Human Oversight Record for a specific output on a specific date. The provision builds the pipe. It does not specify what must flow through it, and at what resolution, for every decision.
+
+The EU AI Act creates the most demanding system-level governance obligations in the existing AI regulatory landscape. Its requirements for technical documentation (Article 11), transparency (Article 13), human oversight (Article 14), and record keeping (Article 12) collectively push operators of high-risk AI systems towards governance practices that are genuinely closer to the Digital Alibi standard than any prior framework. But ``closer to'' is not ``at.'' An organisation that achieves full EU AI Act compliance for a high-risk AI system has done the most that any current regulatory framework requires. The output-moment gap remains.
+
+UK AI Safety Framework DSIT, 2023
+
+The UK Government's AI Safety Framework, published by the Department for Science, Innovation and Technology, establishes the UK's approach to AI safety and governance in the post-Brexit regulatory environment. Its emphasis on safety by design, contestability, and transparency reflects the UK's ``pro-innovation'' regulatory philosophy, seeking to enable AI deployment while building in safeguards that protect individuals and institutions from AI-related harms.
+
+The Framework's contestability requirement, the obligation for individuals affected by automated decisions to have access to a human review process, is the provision most directly proximate to the Digital Alibi requirement. A meaningful contestability mechanism requires, in principle, that the organisation can retrieve and present the information picture for a challenged decision. In practice, most implementations of contestability provide access to a human reviewer without providing that reviewer with the contemporaneous evidence of what the AI system knew at the moment of the original decision. The contestability mechanism is present. The evidence base it should operate on is not.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+What Each Framework Addresses, and What It Does Not
+
+The following table maps each framework against the four Digital Alibi elements. A ``YES'' indicates that the framework creates requirements that, if fully implemented, contribute to the relevant element. A ``NO'' indicates that the framework does not address the element. A ``PARTIAL'' indicates that the framework creates conditions under which the element could exist without requiring it to.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Framework
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Decision Identity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Information Picture
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Human Oversight Record
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Accountability Chain
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+ISO 42001:2023 & PARTIAL & NO & PARTIAL & PARTIAL \\
+OECD AI Principles 2019 & NO & NO & NO & PARTIAL \\
+PRA SS1/23 (MRM) & PARTIAL & NO & PARTIAL & PARTIAL \\
+EU AI Act, High Risk & PARTIAL & PARTIAL & PARTIAL & PARTIAL \\
+UK AI Safety Framework & NO & NO & PARTIAL & PARTIAL \\
+\end{longtable}
+
+The pattern is consistent across all five frameworks. The Accountability Chain receives the most coverage, every framework creates some form of accountability requirement, though none of them require named individual accountability at the output-moment level. The Information Picture receives the least, no framework currently requires a contemporaneous record of the complete information picture, including the negative space, for each specific AI output. Decision Identity and Human Oversight Record sit between these poles: frameworks create conditions for them without requiring the output-moment capture that would make them forensically usable.
+
+The ``PARTIAL'' entries are not neutral. They represent genuine governance progress. An organisation at ``PARTIAL'' on all four elements is in a better position than one at ``NO'' on all four. But ``PARTIAL'' is not a Digital Alibi. A partially present element is not present at the moment the question arrives. In the evidentiary context this book describes, partial governance and absent governance produce the same result: an organisation that cannot answer the output-moment question from contemporaneous evidence.
+
+Partial governance and absent governance produce the same result at the output moment. The question does not grade on the curve of good intentions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Why the Gap Is Structural, Not Accidental}
+
+The absence of the output-moment evidentiary requirement from every major AI governance framework is not an oversight. It reflects a deliberate design choice made by the people who built those frameworks, a choice that was entirely rational given the problem they were trying to solve.
+
+Every framework examined in this chapter was designed to address a governance problem that existed before the evidentiary question this book raises became acute. ISO 42001 was designed to help organisations build systematic AI management practices in the absence of any standardised approach. The OECD Principles were designed to establish intergovernmental normative consensus on what responsible AI stewardship should look like. The PRA's SS1/23 was designed to address model risk management practices that varied enormously across UK financial institutions. The EU AI Act was designed to create an enforceable regulatory floor for AI deployment in high-risk contexts across the single market. The UK Safety Framework was designed to define a regulatory philosophy for an emerging technology landscape.
+
+None of these frameworks were designed to answer the question a court asks about a specific AI-assisted decision. That question was not the problem they were addressing. It was not visible as a distinct governance requirement when most of these frameworks were developed. It has become visible now because AI has moved from a technology deployed in experimental or low-stakes contexts to a technology that is contributing to decisions with material legal, financial, and human consequences, and because the first regulatory investigations and legal challenges involving AI-assisted decisions have begun to reveal what is and is not available when that question is asked.
+
+The frameworks will evolve. The EU AI Act's output-moment requirements are closer than any prior framework to what the Digital Alibi demands. Future iterations of model risk management guidance, AI management system standards, and AI safety frameworks will likely move further in this direction as the evidentiary question becomes more visible through enforcement actions and litigation. But evolution takes time. The output-moment question is being asked now, with the frameworks that currently exist. And those frameworks leave the gap open.
+
+The frameworks will evolve to close this gap. But that evolution is measured in years. The output-moment question is being asked today, with the governance infrastructure that exists today.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Full Shelf: A Board That Has Done Everything Right}
+
+The board introduced at the start of this chapter, ISO 42001 certified, SM\&CR mapped, EU AI Act compliant, OECD principles adopted, faces a specific scenario. Its insurance business uses an AI system to assess claims. The system is well-governed by every conventional standard. Model validation has been completed. The accountability map names the Chief Claims Officer as the responsible Senior Manager. The EU AI Act technical documentation is in order. The quarterly governance report to the board includes model performance statistics across the claims portfolio.
+
+A claimant brings a judicial review of a claims decision on the grounds of algorithmic bias. The court order requires the board to produce: the version of the AI system deployed at the moment the claimant's claim was assessed; the complete data inputs presented to the system for the claimant's specific claim, including any data the system was not given; the human oversight record for the assessment, who reviewed the AI output, what they were shown, and what their authority to override was; and evidence that the accountability chain was current at the moment of the claimant's assessment, specifically named.
+
+The board's legal team reviews the governance documentation. The ISO 42001 certification covers the management system, not the output moment. The EU AI Act technical documentation describes the system's design, not what was active at the claimant's specific assessment. The model validation report is fourteen months old. The quarterly governance report contains portfolio-level statistics that cannot be disaggregated to the level of the claimant's individual assessment.
+
+Then the SM\&CR accountability map. The map names the Chief Claims Officer as the Senior Manager responsible for AI-assisted claims decisions. The Chief Claims Officer is currently the respondent to a separate employment matter and is not available. The legal team examines when the map was last updated. Three months before the claimant's assessment date. At that point, the previous Chief Claims Officer had resigned and the current appointment was not yet formally documented in the SM\&CR register. The map was updated after the new appointment was confirmed, but the claimant's assessment falls in the gap between resignation and registration.
+
+For the three-week period covering the claimant's assessment, there is no named Senior Manager whose accountability for AI-assisted claims decisions is documented contemporaneously in the SM\&CR register. The accountability chain has a gap at the output moment of this specific decision. Under section 66A of the Financial Services and Markets Act 2000, the FCA will ask who was the named Senior Manager accountable for this decision at the moment it was made. The answer from the documentation is: nobody. Or more precisely: someone whose accountability was not yet registered.
+
+The current Chief Claims Officer's legal position is now acute. Their name appears on the accountability map, but their appointment postdates the decision. If they attempt to claim accountability for the decision to demonstrate the firm's governance, they assert responsibility for a decision made before they were formally registered. If they deny accountability, the firm has no named Senior Manager for the period. Neither position is defensible. The gap in the accountability map, three weeks, one interim appointment, one missing SM\&CR update, has created a personal liability exposure that no amount of subsequent governance remediation can cure. The output moment has passed. The accountability chain was not current at that moment. The governance architecture built correctly around it, before and after, is irrelevant to the question of who was accountable then.
+
+The board has not failed to govern. It has failed to govern at the resolution the court order requires. The governance infrastructure was built to operate at system level and portfolio level. The court order requires decision level. The gap between those two levels of resolution is the Digital Alibi gap, and it exists in this board's governance architecture despite the presence of every major framework the industry has developed.
+
+\textbf{WHAT THE ``FULL SHELF'' BOARD HAS, AND WHAT THE COURT ORDER REQUIRES}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+What the Board Has
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+What It Does Not Establish
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+ISO 42001 certification & Establishes the management system. Does not establish the output moment. \\
+EU AI Act Article 12 logging & Captures events relevant to system risk identification. Does not capture the complete information picture for each individual output between those events. \\
+SM\&CR accountability map & Names a responsible Senior Manager. Does not verify that name was current, and registered, at this specific output moment. \\
+Model validation report & Assesses the model at a point in time. Does not establish what the model knew for this specific input. \\
+Quarterly governance report & Summarises portfolio performance. Cannot be disaggregated to a single claim assessment. \\
+\end{longtable}
+
+The court order asks for one level of resolution lower than everything this board has built. That level is the output moment. The SM\&CR gap, three weeks, one unregistered interim appointment, creates a personal liability exposure for the current Chief Claims Officer that no subsequent governance remediation can close.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Complete Account of the Gap}
+
+Part One of this book has now established the Digital Alibi gap in its complete form.
+
+Chapter 1 showed that the question the gap produces, ``can you show me the complete information picture at the moment this decision was made?'', is already being asked, and that the boards facing it cannot answer it regardless of the quality of their governance preparation. The gap is not theoretical. It is live.
+
+Chapter 2 defined the Digital Alibi standard with precision: four elements, all present simultaneously at the output moment, in a form that is contemporaneous and retrievable. It drew the line between what existing governance architectures produce, documentation of intent, design, and aggregate performance, and what the evidentiary standard requires.
+
+Chapter 3 established the legal architecture of the liability the gap creates. The Companies Act's duty of care, assessed at the moment of the decision. The SM\&CR's Duty of Responsibility, requiring contemporaneous evidence of reasonable steps. The EU AI Act's system-level obligations, which establish the floor but not the output-moment standard. And the central temporal argument: fiduciary duty is not satisfied retrospectively. Every output moment without a Digital Alibi record is a moment of unmet obligation. The accumulation stops only when the architecture starts.
+
+Chapter 4 has identified the structural reason the gap persists despite the existence of a serious and well-developed AI governance canon. The frameworks were designed to answer a different question. They do so with rigour. But the question they were designed to answer is not the question that arrives in a regulatory examination, a shareholder challenge, or a judicial review. That question, about this output, at this moment, with this information picture, under this accountability chain, is not answered by any framework currently in existence.
+
+The existing AI governance canon is a serious body of work that does not close the Digital Alibi gap. Not because it is inadequate at what it was designed to do. Because it was designed to do something else.
+
+Part Two of this book turns to history. Six industries, aviation, financial services, the Post Office, industrial safety, insurance, and medical law, each encountered a version of this gap before AI made it a governance question. In each case, the gap was exposed by a catastrophic failure, an enforcement action, or a legal judgment that made the absence of output-moment evidence impossible to ignore. And in each case, the industry built, in response to its reckoning, a governance architecture that captured the information picture at the moment of consequential decisions.
+
+Those architectures now look obvious. They were not obvious before the reckoning. Part Two examines each reckoning in detail, because understanding why the architecture was built, and what the failure that prompted it looked like, is essential to understanding what building the Digital Alibi architecture requires. The boards reading this book are in the position those industries were in before their reckonings arrived. The question is whether they act before or after.

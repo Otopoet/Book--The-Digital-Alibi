@@ -1,0 +1,154 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\part{When the Alibi Fails, Lessons from Other Industries}
+
+\chapter{The Black Box Mandate, What Aviation Figured Out in 1958}
+
+At eleven thirty-one on the morning of 30 June 1956, two commercial aircraft entered the same airspace above the Grand Canyon in Arizona. United Airlines Flight 718, a Douglas DC-7, was climbing through 21,000 feet on a flight from Los Angeles to Chicago. Trans World Airlines Flight 2, a Lockheed Constellation, was at the same altitude on a heading from Los Angeles to Kansas City. Both aircraft were operating under Visual Flight Rules in uncontrolled airspace. Neither crew could see the other. The aircraft collided.
+
+One hundred and twenty-eight people died. It was, at that moment, the deadliest aviation disaster in American history. The wreckage fell into the Grand Canyon. Most of it was not recovered.
+
+The Civil Aeronautics Board, the federal body responsible for investigating civilian aviation accidents, opened its inquiry within days. Its investigators had access to radar data, air traffic control records, weather information, the flight plans both aircraft had filed before departure, and the physical evidence that could be retrieved from the canyon floor. What they did not have, what did not exist, was any record of what the pilots knew, what their instruments showed, what decisions they made, or what they did in the minutes before impact.
+
+The information existed at the moment of those decisions. At 11:31am on 30 June 1956, the altimeter in the cockpit of United 718 displayed a reading. The airspeed indicator showed a number. The crew of TWA 2 made a course adjustment at some point before the collision, what prompted it, what they saw or did not see, what the decision was based on, is unknowable. The information picture at the moment of every consequential decision made by both crews in the final minutes before impact was never captured. And what was never captured could not be reconstructed.
+
+The CAB investigation produced a finding of probable cause. It could not produce an account of what each crew knew, at each decision moment, in the airspace above the canyon. The inquiry closed without a complete answer to the question that matters most in any investigation of a consequential failure: what information was available at the moment the decisions were made, and what did those with responsibility for the outcome do with it?
+
+\scenebreak
+
+\section{The Federal Aviation Act, 1958: A Governance Revolution}
+
+The Grand Canyon collision, combined with a series of other fatal mid-air incidents in the 1950s, produced a political crisis in American aviation. The response was the Federal Aviation Act of 1958, which created the Federal Aviation Administration and established the regulatory framework for civilian aviation that, in its essential architecture, still operates today.
+
+Among the Act's requirements was a mandate that has since become universal across commercial aviation: the installation and operation of Flight Data Recorders on commercial aircraft. The device was not new, experimental versions had been developed in the 1940s. What was new was the mandate. The United States Congress, through the Federal Aviation Act, established that the information picture at the moment of consequential aviation decisions must be forensically reconstructible. Not retrospectively assembled from whatever fragments survived. Not reconstructed from the memories of surviving crew or controllers. Captured at the moment of the decision, in a form that would survive the event it documented.
+
+The mandate was resisted. Airlines argued that it was expensive and operationally burdensome. Pilots' unions argued that it created a surveillance mechanism that could be used punitively against crews. Manufacturers argued that the technical requirements were difficult to standardise. The arguments were substantive. They were overruled. Congress had decided that the absence of contemporaneous evidence about what happened in a cockpit at the moment of a fatal decision was no longer an acceptable feature of the governance of commercial aviation. The mandate stood.
+
+\begin{quote}
+\emph{Congress did not mandate the Flight Data Recorder because it would prevent accidents. It mandated it because the absence of contemporaneous evidence about what happened at the moment of a fatal decision was no longer acceptable.}
+\end{quote}
+
+The cultural shift that followed the FDR mandate was as significant as its technical content. Before 1958, the governance of commercial aviation operated on a combination of professional standards, procedural compliance, and post-accident reconstruction. After 1958, the industry accepted a new principle: that the information picture at the moment of every consequential decision must be captured in a form that survives the decision and makes retrospective reconstruction unnecessary. That principle, contemporaneous capture rather than retrospective reconstruction, is the principle the Digital Alibi applies to AI governance. Aviation arrived at it through catastrophe. Boards governing AI-assisted decisions can arrive at it through foresight.
+
+\scenebreak
+
+\section{Anatomy of the Aviation Alibi}
+
+The Flight Data Recorder, as it has evolved from the 1958 mandate to its modern form, captures the four elements of a Digital Alibi with a precision that makes it useful not merely as a safety instrument but as a template for what output-moment governance looks like when it is designed to survive a challenge.
+
+The modern FDR records a minimum of eighty-eight parameters, including altitude, airspeed, heading, pitch, roll, vertical acceleration, control surface positions, engine power settings, autopilot status, and dozens of system states that collectively constitute the information picture available to the crew at any given moment. Every parameter is timestamped to a resolution of one second or less. The record is continuous, it does not capture exceptional events only. It captures every moment of the flight, including the moments when the aircraft was performing exactly as designed, because those are the moments whose information picture may subsequently matter.
+
+What the FDR captures for aviation is structurally identical to what the Digital Alibi requires for AI-assisted decisions:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8750}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Digital Alibi Element}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Aviation equivalent}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Decision Identity} & Aircraft type, registration, flight number, and system configuration at each moment, which aircraft, in which operational state, making which navigational decision. \\
+\textbf{The Information Picture} & The complete set of instrument readings, system states, and environmental conditions available to the crew at each second, including what the systems were not designed to show. The negative space. \\
+\textbf{Human Oversight Record} & Control inputs by the crew, what actions were taken, in what sequence, with what effect on the aircraft's behaviour. Not just that a human was present, but what the human did. \\
+\textbf{The Accountability Chain} & Flight crew identity and qualifications, current certifications at the time of the flight, and regulatory authority under which each crew member was operating, all documented before departure. \\
+\end{longtable}
+
+The parallel is not metaphorical. The FDR was designed, under a federal mandate, to answer the same four questions that the Digital Alibi requires to be answerable for every material AI-assisted decision. The governance architecture is the same. The technology is different. The evidentiary principle is identical.
+
+\scenebreak
+
+\section{What Existed, What Was Accessible, What Was Missing}
+
+The Grand Canyon collision is instructive not only for the catastrophe it produced but for the forensic anatomy of what was and was not available to the investigators. This anatomy maps directly onto the structure of every AI governance failure this book describes.
+
+What existed: both aircraft were fitted with altimeters, airspeed indicators, magnetic compasses, and radio communication equipment. The air traffic control system held records of the last radio contact with each aircraft. Weather observation stations had recorded conditions along the routes. The flight plans both crews filed before departure showed their intended headings and altitudes. A great deal of information existed.
+
+What was accessible: the CAB had access to the filed flight plans, the last radio contacts, the weather records, and the physical wreckage. From these, it could reconstruct the probable position of each aircraft at specific points before the collision. It could not reconstruct the information the crews had at any specific decision moment, what the altimeters actually read, whether any crew member saw the other aircraft before impact, what prompted any course deviation, what the crews discussed in the final minutes.
+
+What was missing: the contemporaneous record of the information picture at the decision moment. Not the information, the instruments existed, the radio was working, the crew was there. The record of what those instruments showed, what the crew heard, and what they decided. That record did not exist because nobody had built the architecture to create it.
+
+\begin{quote}
+\emph{The information existed. The information picture did not. That gap, between what exists in a system and what is captured at the moment of each consequential decision, is the same gap that exists in the AI governance of every major organisation today.}
+\end{quote}
+
+The CAB's investigation produced one of the most carefully qualified probable cause findings in American aviation history. It could not state with certainty what caused the collision because it could not establish what the crew of either aircraft knew or did in the decisive moments. The probable cause it found, that both aircraft were operating under Visual Flight Rules in uncontrolled airspace and that neither crew saw the other in time to take avoiding action, was almost certainly correct. It was also almost entirely irretrievable from the available evidence. The investigation had to reason to a conclusion rather than read one from the record.
+
+Reasoning to a conclusion rather than reading one from the record is what every organisation without a Digital Alibi architecture will be forced to do when its AI governance is challenged. The reasoning may be correct. The regulator, the court, or the shareholder's counsel will examine the gap between the reasoning and the contemporaneous record, the record that does not exist, and draw their own inferences about what that gap contains.
+
+\scenebreak
+
+\section{The Liability Consequence: When Reconstruction Is Not Enough}
+
+The Grand Canyon collision produced no individual criminal prosecutions. The two airlines were not found civilly liable in the conventional sense, both aircraft were operating legally, in legal airspace, under applicable rules. The CAB's probable cause finding did not assign fault to any individual or organisation in terms that exposed them to direct legal liability for the deaths. In the governance terms that mattered, the absence of contemporaneous evidence was a shield as much as a sword: it prevented the investigation from establishing what anyone had done wrong, because it prevented the investigation from establishing what anyone had done at all.
+
+The liability consequence of the collision was not immediate financial punishment. It was systemic regulatory consequence, the Federal Aviation Act and the FDR mandate, that transformed the economics and the governance architecture of the entire industry. The cost of implementing FDR technology across the commercial aviation fleet was, at the time, considerable. It was imposed regardless of whether any individual airline had been negligent. The mandate was not a response to demonstrated negligence. It was a response to demonstrated inability to establish what had happened at the moment of a consequential failure.
+
+This is the liability pattern that AI governance is approaching. The first major AI governance enforcement actions and judicial decisions will not necessarily find individual boards or directors guilty of wrongdoing. They will find that the governance architecture did not capture the information picture at the output moment, and that in the absence of that record, the question of what happened at the moment of the consequential decision cannot be answered. The regulatory and legislative response to that finding will be a mandate, not because the organisations concerned were negligent, but because the absence of contemporaneous evidence is no longer an acceptable feature of the governance of consequential AI-assisted decisions.
+
+The aviation industry spent the years between 1956 and 1958 resisting that mandate. Most commercial aviation boards are now grateful it was imposed. The Digital Alibi is the AI governance equivalent of the FDR mandate, the governance architecture that will eventually be required because the alternative has proven inadequate. The question for the boards reading this book is whether they implement it before the mandate arrives or wait for the equivalent of the Grand Canyon.
+
+\scenebreak
+
+\section{The Architecture Aviation Built, and What It Took to Build It}
+
+The governance architecture that the 1958 mandate initiated, and that has been developed and refined across seven decades of aviation safety practice, is worth examining in detail. Not because the technical specification is directly transferable to AI governance, but because the architecture's design principles are.
+
+The first principle is continuity. The FDR does not activate when something goes wrong. It runs continuously throughout every flight, capturing the information picture at every moment, because the governance requirement is not to document exceptions, it is to document reality. An AI governance architecture that captures output-moment evidence only for high-risk decisions, or only when a review is triggered, or only for decisions that are subsequently challenged, is not a Digital Alibi. It is a selected sample. The evidentiary standard requires continuity: the information picture at every material output moment, not the information picture at the moments the organisation anticipated would matter.
+
+The second principle is independence. The FDR is not operated by the flight crew. It is not accessible to the flight crew in flight. It is designed specifically to prevent the information it captures from being modified by the people whose decisions it records. An AI governance architecture in which the teams responsible for AI system deployment are also responsible for the capture and retention of output-moment evidence creates the conditions for the record to be shaped by the interests of those it documents. The independence of the evidence from the parties it concerns is a design requirement, not a procedural nicety.
+
+The third principle is survivability. The FDR is housed in a crash-hardened enclosure, painted international orange, and positioned in the aircraft's tail section, the part most likely to survive a catastrophic event. The design specification is not that the record survives normal operations. It is that the record survives the event whose investigation will require it. An AI governance architecture that stores output-moment evidence in systems that can be overwritten, that are subject to routine data retention policies, or that are accessible to the parties whose governance they document has not met the survivability requirement. The Digital Alibi must survive the incident that will require it, including, in the AI governance context, the legal proceedings, the regulatory investigation, and the shareholder challenge that may arrive years after the output moment it records.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{THE THREE DESIGN PRINCIPLES OF THE AVIATION DIGITAL ALIBI, APPLIED TO AI GOVERNANCE}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Continuity: capture runs at every output moment, not only when a risk is anticipated or an exception is flagged. A selected sample is not a Digital Alibi. \\
+Independence: the evidence is captured and retained by a mechanism that cannot be modified by those whose decisions it records. Governance of the record must be separate from governance of the system. \\
+Survivability: the record is stored in a form and location that will survive the investigation, the legal proceedings, and the regulatory challenge that may arrive years after the output moment. Routine data retention schedules are not sufficient. \\
+\end{longtable}
+
+The survivability principle deserves particular attention in the AI governance context, because the threats to record survival are materially different from those the aviation engineers faced in 1958. The FDR's survivability requirement was physical: the device had to withstand a 3,400g impact, 1,100-degree Celsius fire for thirty minutes, and immersion in saltwater for thirty days. The engineering solution was a steel enclosure, a fireproof insulation jacket, and a self-contained power supply. Those threats are well understood and the solutions are well tested.
+
+The survivability threats facing an AI governance record are less physical and more structural. The output-moment evidence must survive vendor insolvency, if the AI system is operated by a third-party provider that ceases trading, goes into administration, or is acquired and its infrastructure decommissioned, the evidence of every decision that system contributed to must remain accessible to the organisation that deployed it, not disappear with the vendor's server infrastructure. It must survive data migration, as organisations move between cloud providers, update their data architectures, or consolidate systems, output-moment records captured in legacy formats must remain retrievable and legible. It must survive the deliberate or accidental deletion that routine data retention policies permit, a governance record kept on the same retention schedule as operational logs will be destroyed before the investigation that requires it arrives. And it must survive legal challenge to the record itself, if the integrity of the evidence is contested, the organisation must be able to demonstrate that the record has not been modified since the moment it was created. The aviation solution to the integrity challenge is physical tamper-evidence. The AI governance equivalent is cryptographic integrity verification, a record whose modification after creation is demonstrably detectable. Building survivability into an AI governance architecture means designing for all four of these threats before any of them materialise.
+
+\scenebreak
+
+\section{A Practitioner's Note: What Aviation Already Knows}
+
+I have spent significant parts of my career working within aviation technology, in the systems that manage revenue, distribution, and operational decision-making for carriers operating within the network architectures that make modern commercial aviation function. The governance culture of aviation is not an abstraction to me. It is the professional environment in which decisions with material safety, commercial, and regulatory consequences are made daily, and in which the principle that consequential decisions must be documentable at the moment they are made is not a governance aspiration but an operational baseline.
+
+What strikes a practitioner moving between aviation and AI governance is not the technical difference between these domains. It is the cultural one. Aviation has been governed, for nearly seventy years, on the assumption that the information picture at the moment of a consequential decision will eventually be examined, by an investigator, by a regulator, by a court, by a safety review board. That assumption shapes how decisions are made, how systems are designed, how records are kept, and how oversight is exercised. The FDR is not a foreign imposition on aviation culture. It is an expression of it.
+
+AI governance has not yet developed that cultural assumption. The organisations deploying AI in material decision processes today are, in most cases, operating on the implicit assumption that the decisions their systems contribute to will not be forensically examined at the output-moment level, or that if they are, the evidence will be reconstructable from what remains. That assumption is wrong. The examinations have begun. The reconstructions are being found inadequate. The cultural shift that aviation made between 1956 and 1958, from ``we will reconstruct if necessary'' to ``we will capture as a matter of course'', is the shift AI governance must now make. The boards that make it proactively are the boards that will not need the FDR equivalent to be mandated for them.
+
+\begin{quote}
+\emph{Aviation made the cultural shift from reconstruction to contemporaneous capture between 1956 and 1958. AI governance must make the same shift now. The boards that make it proactively are the boards that will not need the mandate imposed upon them.}
+\end{quote}
+
+\scenebreak
+
+\section{The Direct Parallel: Aviation's Reckoning and AI's}
+
+Chapter 4 closed Part One with the argument that the existing AI governance canon, however rigorous, does not address the output-moment evidentiary question. Part Two opens with aviation because aviation is the clearest historical demonstration that this is not a new problem, that the argument for not solving it is not new, and that the argument for solving it is not new either.
+
+In 1956, commercial aviation had professional standards, procedural frameworks, regulatory oversight, and a safety culture that was, by the standards of the time, sophisticated. None of it was sufficient to answer the question that the Grand Canyon collision made unavoidable: what information was available at the moment of each consequential decision, and what did those responsible for the outcome do with it?
+
+In 2026, corporate AI governance has professional standards, framework certifications, regulatory compliance programmes, and a risk management culture that is, by the standards of the time, sophisticated. None of it is sufficient to answer the question that the first major AI enforcement actions and judicial decisions are already making unavoidable: what information was available at the moment of each AI-assisted decision, and what did those responsible for the outcome do with it?
+
+The question is identical. The gap is identical. The governance architecture required to close it is, in its design principles, identical. The only material difference is the technology involved and the time elapsed before the question was asked.
+
+The five chapters that follow this one examine five more industries that encountered this gap and built their architecture in response. Each of them resisted the architecture before their reckoning made it unavoidable. Each of them regards the architecture as obvious in retrospect. For the boards reading this book, the architectural requirement is already obvious, the question is only whether to build it before or after the reckoning arrives.

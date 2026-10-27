@@ -1,0 +1,55 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter*{Appendix D: Regulatory Reference Map}
+\addcontentsline{toc}{chapter}{Appendix D: Regulatory Reference Map}
+\markboth{Appendix D: Regulatory Reference Map}{Appendix D: Regulatory Reference Map}
+
+This appendix cross-references the four Digital Alibi elements against the principal instruments cited in the book. It is a reference map, not legal advice; the application of any instrument to a specific organisation is a matter for that organisation's counsel.
+
+\section{EU AI Act}
+
+The compliance deadline for operators of high-risk AI systems was 2 August 2026; the obligations are now in force. The penalty ceiling for non-compliant high-risk systems is €15 million or 3\% of global annual turnover, whichever is higher.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Article
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Obligation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Digital Alibi element engaged
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Article 9 & Risk management system across the high-risk system lifecycle & The Information Picture (known limitations and residual risks must be identified, which requires the negative space to be documented) \\
+Article 12 & Logging: automatic recording of events relevant to identifying risks and substantial modifications & Decision Identity; The Information Picture (the output-moment record is only possible if logging captures it) \\
+Article 13 & Transparency and provision of information to deployers; outputs must be interpretable & The Human Oversight Record (a reviewer cannot exercise oversight over an output they cannot interpret) \\
+Article 14 & Human oversight: effective oversight by natural persons with authority to intervene & The Human Oversight Record; The Accountability Chain \\
+Article 19 & Log retention: operators must keep automatically generated logs for defined periods & Retrievability across all four elements \\
+\end{longtable}
+
+The Act's logging and retention provisions come closest of any instrument to mandating output-moment capture. They govern the system's records. They do not, of themselves, assemble those records into the coherent information picture, oversight record, and accountability chain that a forensic examination of a specific decision requires. Compliance is the floor. The Digital Alibi is the standard the examination applies.
+
+\section{FCA Senior Managers and Certification Regime}
+
+The SM\&CR attaches personal accountability to named Senior Managers, enforced through the Duty of Responsibility under section 66A of the Financial Services and Markets Act 2000. The regime does not distinguish between a decision made by a human and a decision materially influenced by an AI system; the Senior Manager responsible for the decision area retains accountability, and the ``reasonable steps'' defence is evidential. The Accountability Chain element maps directly onto SM\&CR obligations. The regime creates the accountability framework without mandating output-moment capture of the information picture; a Senior Manager can hold clear accountability for a decision whose evidence does not exist.
+
+\section{PRA Supervisory Statement SS1/23, Model Risk Management}
+
+SS1/23 (May 2023) applies to UK banks, building societies, and PRA-designated investment firms. It requires a sound model risk management framework, model inventory and risk tiering, and independent validation of high-risk models. It governs model-level assurance, not decision-level evidence. Full SS1/23 compliance engages Decision Identity partially (through inventory and versioning) and leaves The Information Picture at the specific output moment unaddressed.
+
+\section{UK Companies Act 2006 and the UK Corporate Governance Code}
+
+Section 174 requires each director to exercise reasonable care, skill, and diligence, assessed against what a reasonably diligent director would know and do. The section is temporal: the duty attaches at the moment of each decision, and the evidence that the duty was exercised must relate to that moment. Section 172 requires directors to have regard to specified factors in promoting the company's success, which presupposes an information picture in which those factors were visible. The Corporate Governance Code's provisions on risk management and internal control (Principle O and its supporting provisions) require the board to establish and maintain effective risk management, and to be able to report on its effectiveness, which is an evidential exercise. All four elements are engaged: the statute and the Code assume the board's information position is demonstrable, and the Digital Alibi is the form that demonstration takes for AI-assisted decisions.
+
+\section{Adjacent instruments}
+
+DORA adds operational resilience, incident reporting, and ICT third-party risk obligations for financial entities, engaging the Exposure and Control facets where AI is embedded in critical processes. ISO/IEC 42001:2023 provides a certifiable AI management system standard, reaching the formally verified level on the Control facet without requiring decision-level evidence. The NIST AI Risk Management Framework (GOVERN, MAP, MEASURE, MANAGE) is voluntary and process-oriented; it structures governance activity without imposing an evidentiary standard. GDPR Article 22 constrains solely automated decisions with legal or similarly significant effects and grounds the convergence-point obligations described in Appendix A.
+
+The pattern across the map is consistent. Each instrument governs process, documentation, or system-level assurance. None requires the contemporaneous, retrievable record of the complete information picture at the moment of a specific decision. That is the gap the four elements close.

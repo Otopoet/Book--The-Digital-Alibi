@@ -1,0 +1,114 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter{The Decision Map, How to Build Your Evidence Ledger}
+
+In 2003, the Batson Report into Enron Corporation's governance failure reached a finding that should have been unremarkable but was devastating. Independent directors on the Enron board had approved related-party transactions, the partnerships, the off-balance-sheet structures, the conflict-of-interest arrangements, without adequate information about what those transactions meant for the organisation they were supposed to govern. The report did not find that the directors had been negligent in the conventional sense. It found something more precise: the governance architecture through which approvals were sought had been constructed in a way that made the information picture at each approval moment irrecoverable. The independent directors had signed off. The information that would have explained what they were signing off on was not in the record they were given. When the question arrived, what did you know at the moment you approved this?, the answer was that the record did not allow the question to be answered.
+
+Enron is not an AI governance case. But the governance failure it illustrates is identical in structure to the Digital Alibi gap this book describes. A board that approves AI-assisted decisions without a governance architecture that captures what the system knew at each decision moment is in the same structural position as the Enron independent directors: it has approved, it cannot reconstruct, and when the question arrives, the record will not allow it to be answered. The Enron directors were betrayed by paper trails too complex to reconstruct. Today's directors face Decision Black Holes generated at machine speed, where the information picture is overwritten before anyone has drawn breath.
+
+The Decision Map is the governance architecture that makes that answer impossible to suppress. It is the board's evidence ledger for AI governance: a structured record, for each material AI-assisted decision, of the four Digital Alibi elements at the decision moment. It is not a retrospective document assembled after a challenge arrives. It is a prospective architecture, built before deployment, that captures each future decision automatically as it is made. It is the document that a regulator or court will ask for. It is the document that currently does not exist in most organisations. Building it is the primary governance act this book recommends.
+
+\begin{quote}
+\emph{The Enron independent directors signed off. The record did not capture what they were signing off on. When the question arrived, it could not be answered. The Decision Map is the governance architecture that makes that failure structurally impossible, not because it prevents bad decisions, but because it captures exactly what was known at the moment each decision was made.}
+\end{quote}
+
+\scenebreak
+
+\section{What the Decision Map Is}
+
+The Decision Map is a structured record with six fields, capturing the complete Digital Alibi for each material AI-assisted decision at the moment the decision is made. It is not a governance policy document. It is not a model documentation template. It is not a board report produced after a governance review. It is a contemporaneous evidentiary record, created at the output moment, in a form designed for forensic examination, that does not change after that moment.
+
+The six fields are: the Decision Record, which identifies the specific decision and the AI system that contributed to it; The Information Picture, which captures what the system was given, what it was not given, and what the decision-maker could access; the Negative Space Record, which documents the structural absences in the information environment; The Human Oversight Record, which documents who reviewed the output and in what capacity; The Accountability Chain, which names the individual accountable for each governance function at the decision moment; and the Retrievability Certification, which confirms that all five preceding fields can be produced within the timeframe a regulatory or legal examination requires.
+
+Each field corresponds to a Digital Alibi element or a governance requirement established in Part Three. The Decision Record delivers Decision Identity. The Information Picture and Negative Space Record together deliver The Information Picture element in its three-part form, what was there, what was retrievable, what was missing. The Human Oversight Record and Accountability Chain deliver the third and fourth elements. The Retrievability Certification delivers the retrievability requirement from Chapter 11. The six fields are not a bureaucratic structure. They are the operational implementation of the Digital Alibi standard.
+
+\scenebreak
+
+\section{The Six Fields in Detail}
+
+\section{Field 1 The Decision Record}
+
+The Decision Record identifies the specific AI-assisted decision with four data points that must all be captured at the output moment: the decision description, what determination was made and for which subject (individual, organisation, or regulated matter); the decision date and time, timestamped to the output moment not the approval moment; the AI system identity, at the version and parameter configuration deployed at the output moment; and the decision classification, whether the AI system's output was the primary basis for the decision, one input among several, or an output that the human reviewer overrode.
+
+The decision classification is the field most commonly absent from existing governance records and most directly relevant to the EU AI Act's Article 14 human oversight requirements. An organisation that cannot distinguish, from its contemporaneous record, between decisions where the AI output was followed automatically and decisions where it was overridden by a human reviewer cannot demonstrate genuine human oversight for either category. The Decision Record requires that distinction to be captured at the output moment, not inferred after the fact from the absence of an override record.
+
+\section{Field 2 The Information Picture}
+
+The Information Picture field captures the positive record dimension of the three-part test from Chapter 13: what was there at the output moment. It has four mandatory sub-fields: the data inputs presented to the model for this specific output, including data vintage for each source; the model state at the version deployed, raining data vintage, last validation date, and performance characteristics as confirmed at that version; the operational parameters active at the output moment, including any threshold configurations that differ from the standard deployment; and the outputs produced, in the exact form presented to the human reviewer including confidence indicators.
+
+The data vintage sub-field is the one most frequently omitted from existing model logging and the one that produces the most significant evidentiary gap when challenged. A model that was given income data current to eight months ago for a credit decision made today produced its output on a materially different information basis than a model given current income data. The vintage must be captured for each data source at the output moment, because it is the evidence of what the model actually knew, not what it was designed to know.
+
+\section{Field 3 The Negative Space Record}
+
+The Negative Space Record is the field with no precedent in existing AI governance frameworks and the field whose absence is most consistently the focus of regulatory examination and discrimination litigation. It documents three categories of absence that must be captured contemporaneously: data fields that were absent or null for this specific output; data sources that were structurally excluded from the model's information environment by design, the design exclusions established at model development; and data that was present but whose vintage exceeded a defined freshness threshold at the output moment.
+
+The critical governance principle for the Negative Space Record is that it must be captured as a positive record, a contemporaneous document of what was not there, rather than reconstructed from schema documentation or data architecture records. A governance record that captures only the positive inputs and relies on data architecture documentation to establish the negative space is not a Negative Space Record. It is an inference. Inferences do not survive cross-examination in the form a contemporaneous record does. The record must state, at the output moment, what was absent.
+
+\section{Field 4 The Human Oversight Record}
+
+The Human Oversight Record captures four elements that Chapter 11 established as the requirements for genuine rather than performative oversight: the reviewer's identity and the authority they held at the review moment; the information they were actually shown, the form in which the AI output was presented and what supplementary information was accessible; the time available for review and the decision volume being processed at the same period; and the disposition of the review, whether the reviewer acted consistently with, inconsistently with, or independently of the AI output, and the recorded basis for their disposition.
+
+The review duration and decision volume sub-fields are the ones most directly relevant to EU AI Act Article 14's requirement that human oversight enables those responsible for the system to detect and correct failures. An oversight record that shows a review duration of twelve seconds per decision, for a reviewer processing decisions at a rate of three hundred per hour, does not demonstrate that genuine oversight was possible. It demonstrates that the governance process placed a human in a position structurally incapable of genuine review. The Human Oversight Record must capture the capacity of the oversight, not merely its occurrence.
+
+\section{Field 5 The Accountability Chain}
+
+The Accountability Chain field names three individuals at the output moment: the model owner, the named individual accountable for the system's design, validation, and performance at the version deployed; the decision process owner, the named individual accountable for the governance process through which the output was incorporated into the decision; and the board-level risk acceptance authority, the named individual at board level who has accepted the risk that this AI system represents, documented at the level of the specific risk rather than the technology estate generally.
+
+All three named individuals must be confirmed as current at the output moment. Currency is the dimension that distinguishes an Accountability Chain from an accountability map. An accountability map is accurate at the date it was produced and may be stale at any subsequent date. The Accountability Chain field captures the accountability position as it was at this specific output moment, which named individual held each accountability role on this date, confirmed from the HR, governance, and SM\&CR registration records as they existed at that date. The Vanishing Vendor scenario from Chapter 11 is the failure mode: a chain that was accurate at deployment but was never confirmed at subsequent output moments loses its anchor at the first departure, resignation, or role change that affects it.
+
+\section{Field 6 The Retrievability Certification}
+
+The Retrievability Certification is the governance confirmation that all five preceding fields can be produced, from the contemporaneous record, within the timeframe a regulatory or legal examination requires. It is not a technical certification of archive status. It is a governance act: a named individual confirms, at a defined periodic interval, that the retrieval mechanism for each field has been tested and that the test produced the complete record within the required timeframe. The certification must be performed by someone independent of the team that built the retrieval architecture, for the same reason the Digital Alibi Assessment must be conducted independently of the teams whose governance it examines.
+
+The certification interval is determined by the organisation's regulatory environment and should be reviewed whenever a material change affects the systems, data infrastructure, or personnel that support retrieval. Changes to supporting infrastructure are the most common cause of retrievability failure that goes undiscovered until a challenge arrives. The certification is the mechanism that catches that failure before the regulator does.
+
+\scenebreak
+
+\section{Building the Decision Map: Sequence and Governance}
+
+The Decision Map is built in three stages. The first is design: establishing the governance architecture that will capture each field automatically at the output moment. The second is validation: confirming that the architecture produces a complete and retrievable Decision Map entry for a test decision before live deployment. The third is operation: running the capture architecture continuously across all material AI-assisted decisions, with periodic retrievability certification and an escalation protocol for capture failures.
+
+The design stage is where most implementation failures occur. Organisations approach the Decision Map as a logging requirement and design a log structure. A log structure captures what the system produces. A Decision Map captures what existed at the decision moment, which includes what the system was not given, who reviewed what in what capacity, and who was accountable at that specific moment. The log structure and the Decision Map overlap in Field 2 (The Information Picture positive record). They do not overlap in Fields 3, 4, or 5. A log that is designed to produce a complete Decision Map is a different architecture from a log that is designed to produce an audit trail.
+
+The validation stage must test the complete retrieval, not just the capture. An organisation that has designed a Decision Map architecture and confirms that it is capturing data has not validated that the Decision Map can be produced from that data within the required timeframe, in a form that is tamper-evident, by a person who was not involved in building the system. Each of those three validation conditions is a separate test. An architecture that passes two of the three has not been validated.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{THE DECISION MAP IMPLEMENTATION CHECKLIST}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Design: Is each of the six fields captured automatically at the output moment, not assembled from logs after the fact? If any field requires manual assembly to produce a Decision Map entry, the design is incomplete. \\
+Decision Record: Does the capture distinguish between AI-led, AI-assisted, and AI-overridden decisions at the output moment? If the classification is inferred from the absence of an override record, the Decision Record is not complete. \\
+Negative Space: Does the Negative Space Record capture absences as positive records at the output moment? If it relies on data schema documentation to establish what was absent, it is an inference, not a record. \\
+Accountability Chain: Are the three named individuals confirmed as current at each output moment from contemporaneous HR and governance records, not assumed from the last accountability map update? \\
+Retrievability: Has the complete Decision Map entry for a live decision been retrieved, by an independent examiner, within the required timeframe, from the contemporaneous record? If the test has not been performed for a live decision, the Retrievability Certification cannot be issued. \\
+Escalation: Is there a defined escalation protocol for capture failures, where the Decision Map entry for a specific decision cannot be completed because a field was not captured at the output moment? The protocol must name who is notified, within what timeframe, and what governance action is required. For a Senior Manager under SM\&CR, a capture failure is not an IT incident. It is a personal accountability event: the named individual on the Accountability Chain for that decision has a gap in the evidentiary record for which they are named as responsible. The escalation protocol must reach that individual directly, within the session in which the failure occurred, with a documented notification that the gap exists and that they are named in the chain it affects. \\
+\end{longtable}
+
+\scenebreak
+
+\section{The Decision Map and the Governance Address}
+
+The Decision Map is the operational implementation of A5, the full Digital Alibi governance address on the Accountability facet of the Governance Classification. Chapter 14 established that A5 requires four conditions to be simultaneously present and active: information provenance, a retrieval log, a human observability record, and a retrievability guarantee. Each of those four conditions is delivered by a specific field in the Decision Map. Information provenance is Fields 1 and 2. The retrieval log is Field 3 (the Negative Space Record captures what the system searched for and did not find). The human observability record is Field 4. The retrievability guarantee is Field 6.
+
+An organisation that has built a functioning Decision Map architecture and has passed the three validation conditions, capture, completeness, and independent retrieval, has reached A5 on the Accountability facet for the AI systems covered by the Map. No other governance framework or certification standard delivers A5. It is reached only through the operational implementation the Decision Map describes.
+
+The governance address improvement that results from building the Decision Map extends beyond the A facet. A complete AI systems inventory, the prerequisite for building the Decision Map across all material decisions, advances the E facet. The independent retrievability certification advances the C facet. The regulatory mapping embedded in the decision classification and the sector-specific obligations reflected in the certification interval advances the R facet. The Decision Map, fully implemented, moves an organisation's governance address across multiple facets simultaneously. It is not a single-facet improvement. It is the governance architecture whose implementation the Protocol was designed to produce.
+
+\begin{quote}
+\emph{The Decision Map is not a compliance document. It is the governance architecture that makes the Digital Alibi standard operational, at the output moment, for every material decision, continuously. An organisation that has built it has not met a regulatory requirement. It has built the evidentiary infrastructure that makes every other governance claim credible.}
+\end{quote}
+
+\scenebreak
+
+\section{The Compliance Clock: What 2 August 2026 Started}
+
+Chapter 17 has provided the operational architecture for the Decision Map, the evidence ledger that turns the Digital Alibi standard from a governance aspiration into a forensically defensible reality. Building the Decision Map is the primary governance act this book recommends, and it is the act that delivers the A5 governance address that no regulatory instrument currently requires but every regulatory examination will ultimately reach.
+
+Chapter 18 applies the exposure that the 2 August 2026 EU AI Act deadline created to the complete Protocol. It maps every major AI governance obligation, EU AI Act High Risk, DORA, FCA SM\&CR, GDPR Article 22, ISO 42001, and the remaining standards in the regulatory stack, to the specific facets and levels of the Governance Classification, producing a prioritised sequence of governance investments for an organisation that must reach a defined governance address under obligations that are already in force. The Decision Map is the final act in that sequence. Chapter 18 establishes what must happen before the Map can be built.
