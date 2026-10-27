@@ -21,7 +21,7 @@ Fonts: EB Garamond and DM Mono are used if installed; otherwise Latin Modern is 
 | `preamble.tex` | Page size (6 x 9 in), brand colours, headings, tables, running heads |
 | `frontmatter/` | Title page (placeholder), Foreword (author-written) |
 | `chapters/ch01.tex` to `ch21.tex` | One file per chapter; `\part` commands sit at the head of chapters 1, 5, 11 and 16 |
-| `backmatter/` | Epilogue and Appendices A to E |
+| `backmatter/` | Epilogue and Appendices A to G |
 
 Each chapter file starts with `% !TeX root = ../main.tex`, so it can be compiled from inside TeXstudio when edited.
 

@@ -1,0 +1,145 @@
+% !TeX root = ../main.tex
+% !TeX encoding = UTF-8
+
+\chapter*{Appendix G: The Forensic Readiness Matrix}
+\addcontentsline{toc}{chapter}{Appendix G: The Forensic Readiness Matrix}
+\markboth{Appendix G: The Forensic Readiness Matrix}{Appendix G: The Forensic Readiness Matrix}
+
+This is a crisis-and-compliance reference for board members, General Counsel and Audit Committee Chairs. Each of twelve scenarios maps a specific boardroom threat to the forensic gap it reveals, the Digital Alibi element that addresses the gap, and the question to ask in the room. The matrix can be used alone or alongside the book. The chapter references point to the operational detail behind each scenario.
+
+Each scenario has the same four parts. The \textbf{forensic gap} is what the organisation almost certainly cannot produce from the contemporaneous record. The \textbf{alibi lever} is the element, protocol phase or chapter section that addresses it. The \textbf{killer question} is the line to use in the room, addressed to the CEO, CTO or board. The \textbf{see} line lists the chapters.
+
+The killer question is the most important part. A non-executive director does not need to explain the Digital Alibi to the CEO. The director needs a question that cannot be answered with governance aspiration, because it requires a forensic answer from the contemporaneous record.
+
+\newcommand{\scenario}[6]{%
+  \needspace{12\baselineskip}%
+  \par\medskip\noindent{\color{crimson}\textbf{#1}}\quad\emph{#2}\par\smallskip
+  \noindent\textbf{Forensic gap.} #3\par\smallskip
+  \noindent\textbf{Alibi lever.} #4\par\smallskip
+  \noindent\textbf{Killer question.} \emph{#5}\par\smallskip
+  \noindent\textbf{See.} #6\par\medskip
+}
+
+\section{Part One: Regulatory and Legal Crisis}
+
+These scenarios arise when an external authority (a regulator, a court or a claimant) has asked about a specific past AI-assisted decision. In each, the gap is the absence of the contemporaneous output-moment record that would answer the question directly.
+
+\scenario{S01}{``The regulator is in the lobby asking about a specific AI-assisted decision from fourteen months ago.''}
+{The contemporaneous Information Picture for that decision: what the AI system was given, what it was not given, and what the decision-maker could access at the output moment.}
+{Chapter 16 (the Digital Alibi Assessment), Chapter 13 (the three-part test) and Chapter 21 (the post-incident letter).}
+{Can we produce the output-moment record for this specific decision from the contemporaneous record, or are we about to hand the regulator a reconstruction assembled after the question arrived?}
+{Chapters 2, 13, 16 and 21.}
+
+\scenario{S02}{``A claimant's solicitor has served a data subject access request referencing an AI scoring decision.''}
+{Decision Identity at the model version deployed on the decision date, not the current model version and not the current documentation.}
+{Element 1 (Decision Identity), Chapter 17 Field 1 (the Decision Record) and Chapter 11 sub-requirement 1.4 (decision attribution).}
+{Which model version produced this output, and can we demonstrate that independently of the current system, from the record that existed at the output moment?}
+{Chapters 11, 13 and 17.}
+
+\scenario{S03}{``A shareholder has filed a derivative action alleging the board approved AI deployment without adequate information.''}
+{The named board-level risk acceptance authority at the date of approval, documented contemporaneously and not assigned retrospectively after the action was filed.}
+{Element 4 (the Accountability Chain), Chapter 14 (the A4 requirement) and Chapter 19 (the three board acts).}
+{Was there a named individual at board level who accepted accountability for this system, at this version, on the date the deployment was approved, and is that acceptance in the board minute?}
+{Chapters 3, 11, 14 and 19.}
+
+\scenario{S04}{``The ICO has opened an investigation into algorithmic bias in our hiring AI.''}
+{The Negative Space Record: a contemporaneous record of what the hiring model was not given for each affected candidate, including design exclusions and absent data fields.}
+{Element 2 (the Information Picture, negative space), Chapter 13 sub-requirements 13.8 to 13.11 and Chapter 12 (the aggregation problem).}
+{Can we produce a contemporaneous record of what the hiring model was not given for each affected candidate, or can we only show what it was given?}
+{Chapters 11, 12 and 13.}
+
+\section{Part Two: Vendor and Technology Events}
+
+These scenarios arise when a change in the technology environment, such as a vendor failure, a system update or a shadow deployment, exposes the gap between the formal AI inventory and the actual AI decision landscape.
+
+\scenario{S05}{``Our primary AI scoring vendor has just filed for administration.''}
+{Decision Identity and the Accountability Chain for every historical decision the vendor's system contributed to. The documentation sat on the vendor's infrastructure and may disappear with the insolvency.}
+{Chapter 11 (the vanishing vendor) and Chapter 18, Days 1 to 15 (the inventory must confirm independent documentation holdings for each vendor).}
+{Do we hold the model documentation, version history and parameter configuration for this system independently of the vendor's infrastructure, or did the evidence for every past decision just disappear with their servers?}
+{Chapters 11, 17 and 18.}
+
+\scenario{S06}{``The AI system we have used for three years has been updated by the vendor without formal governance approval.''}
+{The model state at the version deployed for each historical decision, demonstrable independently of the current version, which is a different system.}
+{Chapter 17 Field 2 (the Information Picture, model state), Element 1 (Decision Identity, version stamp) and Chapter 11 sub-requirement 1.2 (operational context).}
+{Can we demonstrate, for any decision made before this update, which model version was deployed at that output moment, and can we do so without querying the current system?}
+{Chapters 11, 13 and 17.}
+
+\scenario{S07}{``The CTO has informed the board that a large language model has been integrated into contract review for the past six months.''}
+{The system is not in the formal AI inventory and has no Alibi Record. Every contract decision it contributed to is irrecoverable from the contemporaneous record.}
+{Chapter 12 (shadow AI), Chapter 15 (permission sets) and Chapter 18, Days 1 to 15 (inventory confirmation).}
+{Is this the only AI system contributing to material decisions that is not in our formal governance inventory, and how do we know?}
+{Chapters 12, 15 and 18.}
+
+\scenario{S08}{``A competitor has suffered a major AI governance failure. The board wants to know our position.''}
+{The confirmed governance address across A·E·C·R·M, confirmed by an independent examiner against the forensic standard and not self-assessed.}
+{Chapter 14 (the confirmed address), Chapter 16 (the Assessment) and Chapter 18 (comparison with the sector ceiling).}
+{What is our confirmed governance address for our highest-risk AI systems, confirmed by an independent examiner and not self-assessed, and what is the gap to our sector ceiling?}
+{Chapters 14, 16 and 18.}
+
+\section{Part Three: Internal Governance and Strategy}
+
+These scenarios arise in the internal governance conversation, in the board meeting, the audit committee or the executive team, where the gap must be named and addressed without causing paralysis or displacement.
+
+\scenario{S09}{``The CEO says AI governance is fine, because IT has it handled.''}
+{Named accountability at board level, confirmed by an examiner independent of the technology team. A self-attestation by IT is not a confirmed governance address.}
+{Chapter 14 (the independence requirement) and Chapter 19 (the displacement response and the three board acts that cannot be delegated).}
+{What is our confirmed governance address for our high-risk AI systems, verified by an examiner independent of the technology team, and which named individual at board level has accepted accountability for each system?}
+{Chapters 14, 16 and 19.}
+
+\scenario{S10}{``The board is being asked to approve a new agentic AI deployment.''}
+{A formally defined autonomy boundary, an Alibi Record architecture able to cope with decision density and in place before the first live decision, and a functioning escalation protocol.}
+{Chapter 15 (the board questions before agentic approval; the autonomy boundary as a permission set, not a tool) and Chapter 20 (the Director's Final Checklist).}
+{Is the autonomy boundary formally defined and named, authorised by a named individual and not merely described by capability, and is an Alibi Record architecture able to handle decision density operational before the first live decision is made?}
+{Chapters 15 and 20.}
+
+\scenario{S11}{``The EU AI Act high-risk obligations have been deferred to 2 December 2027, and we have not confirmed our governance address.''}
+{A confirmed governance address from an independent Digital Alibi Assessment. An unconfirmed, self-assessed address is not a defensible position under regulatory scrutiny, and the deferral moves the date without moving the exposure.}
+{Chapter 18 (the 90-day Protocol), Chapter 14 (the sector ceiling of A4·E4·C4·R4·M4 for financial services, insurance and aviation) and Chapter 16 (the Assessment phases).}
+{Have we received a confirmed governance address from an independent Digital Alibi Assessment, or are we relying on a self-assessed position that no independent examiner has verified?}
+{Chapters 14, 16 and 18.}
+
+\scenario{S12}{``This matrix was found after the incident. The regulator has already arrived.''}
+{The contemporaneous record for the decisions under examination does not exist. Future decisions are not yet governed.}
+{Chapter 21 (the three immediate actions: independent assessment, naming the next decision, and being honest with the board) and Chapter 20 (the Alibi Record architecture).}
+{Before the next material AI-assisted decision is made in this organisation, which may be today, is the Alibi Record architecture in place, or will that decision be made in the same governance vacuum as the one now under examination?}
+{Chapters 16, 20 and 21.}
+
+\section{The Director's Final Checklist}
+
+These four questions should be answered affirmatively before a board approves any material AI deployment. A negative answer to any of them means the deployment is proceeding without a complete Digital Alibi architecture.
+
+\begin{enumerate}
+\item Is a complete Alibi Record in place before the first live decision: all four elements, meeting all three technical standards (contemporaneous, tamper-evident, retrievable), and generated automatically at the output moment? If not, the deployment proceeds without a Digital Alibi architecture for every decision it makes.
+\item Has the Retrievability Certification been issued by an independent examiner, confirming that a complete Alibi Record for a live decision can be produced within five working days from the contemporaneous record alone? Without it, the retrievability standard has not been confirmed.
+\item Is the Accountability Chain current at the output-moment level, confirmed from contemporaneous governance records today and not assumed from the last annual review? A chain last confirmed before a departure or restructure may not be current at the deployment moment.
+\item Does the board minute approving the deployment name the board-level risk acceptance authority for this specific system, and not for AI governance generally, and record their acceptance with enough specificity to meet the A4 requirement? A minute that records a governance programme, rather than a named individual accepting a specific accountability, has noted the deployment. It has not governed it.
+\end{enumerate}
+
+\section{Reading a Governance Address}
+
+A governance address is not a score. It is a location in a five-dimensional space. Each facet is measured independently on a scale of 1 to 5. An organisation at A4 and E1 has named accountability and no inventory for the chain to attach to. A composite score would average the two to a figure near three and conceal the gap entirely. The address makes it visible.
+
+The worked example below uses an organisation in financial services, with a confirmed address of A2·E2·C3·R3·M2 against a sector ceiling of A4·E4·C4·R4·M4.
+
+\begingroup
+\small
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{0.07\textwidth}
+  >{\raggedright\arraybackslash}p{0.10\textwidth}
+  >{\raggedright\arraybackslash}p{0.09\textwidth}
+  >{\raggedright\arraybackslash}p{0.64\textwidth}@{}}
+\toprule\noalign{}
+\textbf{Facet} & \textbf{Address} & \textbf{Gap} & \textbf{Board position at this address} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{A} & 2 of 4 & $-2$ & Technical teams own the systems and board accountability is absent. The SM\&CR duty of responsibility is not met, and personal liability exposure is active. \\
+\textbf{E} & 2 of 4 & $-2$ & Production systems are mapped, but vendor-embedded and shadow AI are unmonitored. The DORA requirement is not met and the AI inventory is incomplete. \\
+\textbf{C} & 3 of 4 & $-1$ & The framework is operational but has not been independently tested. The retrievability test from Chapter 13 has not been passed. \\
+\textbf{R} & 3 of 4 & $-1$ & A compliance programme is active but gaps remain. The EU AI Act high-risk obligations will not be met at R3 when they apply on 2 December 2027. \\
+\textbf{M} & 2 of 4 & $-2$ & The need is understood at executive level, but no structured programme is in place. \\
+\end{longtable}
+\endgroup
+
+The total gap to the sector ceiling is eight facet-levels. The priority is A and E before every other facet. Without A4, the SM\&CR liability is personal and active. Without E4, there is no complete inventory for the accountability chain to attach to.
